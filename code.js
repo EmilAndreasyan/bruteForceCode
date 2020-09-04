@@ -59,14 +59,14 @@ function countSubArrays (arr, k){
 }
 console.log(countSubArrays([3,4,-7,1,3,3,1,-4], 7));
 
-// // Find the maximum sum of products of two arrays.
-// function productSum(arr1, arr2){
-//     arr1.sort()
-//     arr2.sort()
-//     let sum = 0;
-//     for (let i = 0; i < arr1.length; i++) {
-//         sum += arr1[i] * arr2[i]
-//     }
-//     return sum
-// }
-// console.log(productSum([1, 2, 3], [5, 4, 3]))
+// Find the maximum sum of products of two arrays.
+function productSum(arr1, arr2){
+    arr1.sort()
+    arr2.sort()
+    let sum = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        sum += arr1[i] * arr2[i]
+    }
+    return sum
+}
+console.log(productSum([1, 2, 3], [5, 4, 3]))
