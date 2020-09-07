@@ -70,3 +70,18 @@ function productSum(arr1, arr2){
     return sum
 }
 console.log(productSum([1, 2, 3], [5, 4, 3]))
+
+// Hoisting
+function personalInfo() {
+    var firstName = 'Adam';
+    var lastName;
+    console.log(firstName);
+    console.log(lastName);
+    console.log(address);
+    console.log(mobile);
+    console.log(dateOfBirth);
+    lastName = 'Smith';
+    var address = 'planet earth';
+    mobile = 1234567890;
+  };
+  personalInfo();
