@@ -43,45 +43,54 @@ let arr = [ 1, 2, 3, 4, 5 ];
 // console.log(reverseArray(arr))
 
 // Number of subarrays with given sum k
-function countSubArrays (arr, k){
-    let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        let sum = 0;
-        for (let j = 0; j < arr.length; j++) {
-            sum += arr[j]
-            if (sum === k){
-                count++
-            }
-        }
-    }
-    return count
-
+function countSubArrays(arr, k) {
+	let count = 0;
+	for (let i = 0; i < arr.length; i++) {
+		let sum = 0;
+		for (let j = 0; j < arr.length; j++) {
+			sum += arr[j];
+			if (sum === k) {
+				count++;
+			}
+		}
+	}
+	return count;
 }
-console.log(countSubArrays([3,4,-7,1,3,3,1,-4], 7));
+console.log(countSubArrays([ 3, 4, -7, 1, 3, 3, 1, -4 ], 7));
 
 // Find the maximum sum of products of two arrays.
-function productSum(arr1, arr2){
-    arr1.sort()
-    arr2.sort()
-    let sum = 0;
-    for (let i = 0; i < arr1.length; i++) {
-        sum += arr1[i] * arr2[i]
-    }
-    return sum
+function productSum(arr1, arr2) {
+	arr1.sort();
+	arr2.sort();
+	let sum = 0;
+	for (let i = 0; i < arr1.length; i++) {
+		sum += arr1[i] * arr2[i];
+	}
+	return sum;
 }
-console.log(productSum([1, 2, 3], [5, 4, 3]))
+console.log(productSum([ 1, 2, 3 ], [ 5, 4, 3 ]));
 
 // Hoisting
-function personalInfo() {
-    var firstName = 'Adam';
-    var lastName;
-    console.log(firstName);
-    console.log(lastName);
-    console.log(address);
-    console.log(mobile);
-    console.log(dateOfBirth);
-    lastName = 'Smith';
-    var address = 'planet earth';
-    mobile = 1234567890;
-  };
-  personalInfo();
+// function personalInfo() {
+// 	var firstName = 'Adam';
+// 	var lastName;
+// 	console.log(firstName); // Adam
+// 	console.log(lastName); // undefined
+// 	console.log(address); //undefined
+// 	console.log(mobile); // Uncaught ReferenceError: mobile is not defined
+// 	console.log(dateOfBirth); // Uncaught ReferenceError: mobile is not defined
+// 	lastName = 'Smith';
+// 	var address = 'planet earth';
+// 	mobile = 1234567890;
+// }
+// personalInfo();
+
+function differencesBetweenVarLetConst() {
+	console.log(firstName); // undefined
+	console.log(lastName); // Uncaught ReferenceError: Cannot access 'lastName' before initialization
+    console.log(address); // Uncaught ReferenceError: Cannot access 'address' before initialization
+    var firstName = 'Adam'
+    let lastName = 'Smith'
+    const address = 'planet earth'
+}
+differencesBetweenVarLetConst()
