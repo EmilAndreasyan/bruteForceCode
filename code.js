@@ -135,3 +135,22 @@ console.log(searchInsert([1,3,5,6], 2));
 console.log(searchInsert([1,3,5,6], 7));
 console.log(searchInsert([1,3,5,6], 0));
 
+//program to check if a subarray with 0 sum exits or not
+function sumWithZero (arr) {
+    //debugger
+    for (let i = 0; i < arr.length; i++) {
+        let sum = arr[i];
+        if (sum === 0) {
+            return true;
+        }
+        for (let j = 0; j < arr.length; j++) {
+            sum += arr[j];
+            if(sum === 0){
+                return true
+            }
+        }
+    }
+    return false
+}
+console.log(sumWithZero([3, 4, -7, 3, 1, 3, 1, -4, -2, -2]));
+console.log(sumWithZero([3, 5]));
