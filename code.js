@@ -167,31 +167,52 @@ let arr = [ 1, 2, 3, 4, 5 ];
 // console.log(palindromeArray([ 1, 2, 2, 1 ]));
 // console.log(palindromeArray([ 1, 2, 2, 2 ]));
 
-// Print all subarrays with a given sum k in an array
-function printSubArrays(arr, k) {
-	//get the size the of the array
-	let length = arr.length;
+// // Print all subarrays with a given sum k in an array
+// function printSubArrays(arr, k) {
+// 	//get the size the of the array
+// 	let length = arr.length;
 
-	//traverse through the array
-	for (let i = 0; i < length; i++) {
-		//temp variables to store the sum and elements
-		let tempArr = [];
-		let sum = 0;
+// 	//traverse through the array
+// 	for (let i = 0; i < length; i++) {
+// 		//temp variables to store the sum and elements
+// 		let tempArr = [];
+// 		let sum = 0;
 
-		//traverse through the every next element after i
-		for (let j = i; j < length; j++) {
-			sum += arr[j];
-			tempArr.push(arr[j]);
+// 		//traverse through the every next element after i
+// 		for (let j = i; j < length; j++) {
+// 			sum += arr[j];
+// 			tempArr.push(arr[j]);
 
-			//if sum is equal to k then print the array.
-			if (sum === k) {
-				console.log(tempArr);
-			}
-		}
-	}
+// 			//if sum is equal to k then print the array.
+// 			if (sum === k) {
+// 				console.log(tempArr);
+// 			}
+// 		}
+// 	}
+// }
+
+// printSubArrays([ 3, 4, -7, 1, 3, 3, 1, -4 ], 7);
+
+function leftCircularArrayRotation(arr, k){
+    for (let i = 0; i < k; i++) {
+        arr.push(arr.shift())
+    }
+    return arr
 }
+console.log(leftCircularArrayRotation([4,5,6], 2));
 
-printSubArrays([ 3, 4, -7, 1, 3, 3, 1, -4 ], 7);
+function rightCircularArrayRotation(arr, k){
+    for (let i = 0; i < k; i++) {
+        arr.unshift(arr.pop())
+    }
+    return arr
+}
+console.log(rightCircularArrayRotation([4,5,6], 2));
+
+
+
+
+
 
 
 // function toTravelOrNotToTravel(amount) {
