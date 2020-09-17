@@ -193,21 +193,38 @@ let arr = [ 1, 2, 3, 4, 5 ];
 
 // printSubArrays([ 3, 4, -7, 1, 3, 3, 1, -4 ], 7);
 
-function leftCircularArrayRotation(arr, k){
-    for (let i = 0; i < k; i++) {
-        arr.push(arr.shift())
-    }
-    return arr
-}
-console.log(leftCircularArrayRotation([4,5,6], 2));
+// function leftCircularArrayRotation(arr, k){
+//     for (let i = 0; i < k; i++) {
+//         arr.push(arr.shift())
+//     }
+//     return arr
+// }
+// console.log(leftCircularArrayRotation([4,5,6], 2));
 
-function rightCircularArrayRotation(arr, k){
-    for (let i = 0; i < k; i++) {
-        arr.unshift(arr.pop())
-    }
-    return arr
+// function rightCircularArrayRotation(arr, k){
+//     for (let i = 0; i < k; i++) {
+//         arr.unshift(arr.pop())
+//     }
+//     return arr
+// }
+// console.log(rightCircularArrayRotation([4,5,6], 2));
+
+//Getting elements in array which match and appears most
+let arr = [ 'event1', 'event2', 'event1', 'event1', 'event3' ];
+function countEvents(arr) {
+    debugger
+	const tallySheet = {};
+	for (let i = 0; i < arr.length; i++) {
+		const eventName = arr[i];
+		if (tallySheet[eventName] == null) {
+			tallySheet[eventName] = 0;
+		}
+		tallySheet[eventName]++;
+	}
+	return tallySheet;
 }
-console.log(rightCircularArrayRotation([4,5,6], 2));
+console.log(countEvents(arr))
+
 
 
 
