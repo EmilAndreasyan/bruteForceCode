@@ -24,7 +24,7 @@
 // differencesBetweenVarLetConst()
 
 // How to reverse an array
-let arr = [ 1, 2, 3, 4, 5 ];
+// let arr = [ 1, 2, 3, 4, 5 ];
 // function reverseArray(arr){
 //     debugger
 // for (let i = 0; i < arr.length/2; i++){
@@ -209,24 +209,37 @@ let arr = [ 1, 2, 3, 4, 5 ];
 // }
 // console.log(rightCircularArrayRotation([4,5,6], 2));
 
-//Getting elements in array which match and appears most
-let arr = [ 'event1', 'event2', 'event1', 'event1', 'event3' ];
-function countEvents(arr) {
-    debugger
-	const tallySheet = {};
-	for (let i = 0; i < arr.length; i++) {
-		const eventName = arr[i];
-		if (tallySheet[eventName] == null) {
-			tallySheet[eventName] = 0;
-		}
-		tallySheet[eventName]++;
-	}
-	return tallySheet;
+// //Getting elements in array which match and appears most
+// let arr = [ 'event1', 'event2', 'event1', 'event1', 'event3' ];
+// function countEvents(arr) {
+// 	const tallySheet = {};
+// 	for (let i = 0; i < arr.length; i++) {
+// 		const eventName = arr[i];
+// 		if (tallySheet[eventName] == null) {
+// 			tallySheet[eventName] = 0;
+// 		}
+// 		tallySheet[eventName]++;
+// 	}
+// 	return tallySheet;
+// }
+// console.log(countEvents(arr));
+
+//Given an unsorted array of integers find a pair with given sum in it
+function findSum (arr, k) {
+    let isFound = false;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === k) {
+                isFound = true
+                break
+            }
+
+        }
+    }
+    return isFound
 }
-console.log(countEvents(arr))
-
-
-
+console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 25)); // true
+console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 100)); //false
 
 
 
