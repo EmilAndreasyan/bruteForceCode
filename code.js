@@ -44,6 +44,7 @@
 // console.log(reverseArray(arr))
 
 //reverse array with recursion
+// let arr = [5, 4, 3, 2, 1]
 // let reverseArrayWithRecursion = (arr, n) => {
 //     //If the length is 0
 //     //then return an empty array
@@ -224,22 +225,53 @@
 // }
 // console.log(countEvents(arr));
 
-//Given an unsorted array of integers find a pair with given sum in it
-function findSum (arr, k) {
-    let isFound = false;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] + arr[j] === k) {
-                isFound = true
-                break
-            }
+// //Given an unsorted array of integers find a pair with given sum in it
+// function findSum (arr, k) {
+//     let isFound = false;
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === k) {
+//                 isFound = true
+//                 break
+//             }
 
-        }
+//         }
+//     }
+//     return isFound
+// }
+// console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 25)); // true
+// console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 100)); //false
+
+// How to use array sort in javascript, sort in ascending order
+let arr = [1, 3, 5, 2, 9, 11, 8, 4];
+arr.sort((a, b) => {
+    if (a < b) {
+        return -1
+    } else if (a > b){
+        return 1
+    } else {
+        return 0
     }
-    return isFound
-}
-console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 25)); // true
-console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 100)); //false
+})
+console.log(arr)
+//or
+arr.sort((a, b) => a - b)
+// sort in descending order
+arr.sort((a, b) => {
+    if (a < b) {
+        return 1
+    } else if (a > b){
+        return -1
+    } else {
+        return 0
+    }
+})
+// or
+arr.sort((a, b) => b - a)
+console.log(arr)
+
+
+
 
 
 
