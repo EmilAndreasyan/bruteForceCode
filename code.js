@@ -242,33 +242,39 @@
 // console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 25)); // true
 // console.log(findSum([15, 4, 9 ,3 ,2, 12, 11, 14, 21, 24, 1, 10], 100)); //false
 
-// How to use array sort in javascript, sort in ascending order
-let arr = [1, 3, 5, 2, 9, 11, 8, 4];
+// // How to use array sort in javascript, sort in ascending order
+// let arr = [1, 3, 5, 2, 9, 11, 8, 4];
+// arr.sort((a, b) => {
+//     if (a < b) {
+//         return -1
+//     } else if (a > b){
+//         return 1
+//     } else {
+//         return 0
+//     }
+// })
+// console.log(arr)
+// //or
+// arr.sort((a, b) => a - b)
+// // sort in descending order
+// arr.sort((a, b) => {
+//     if (a < b) {
+//         return 1
+//     } else if (a > b){
+//         return -1
+//     } else {
+//         return 0
+//     }
+// })
+// // or
+// arr.sort((a, b) => b - a)
+// console.log(arr)
+
+let arr = [ 'réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu' ];
 arr.sort((a, b) => {
-    if (a < b) {
-        return -1
-    } else if (a > b){
-        return 1
-    } else {
-        return 0
-    }
-})
-console.log(arr)
-//or
-arr.sort((a, b) => a - b)
-// sort in descending order
-arr.sort((a, b) => {
-    if (a < b) {
-        return 1
-    } else if (a > b){
-        return -1
-    } else {
-        return 0
-    }
-})
-// or
-arr.sort((a, b) => b - a)
-console.log(arr)
+	return a.localeCompare(b);
+});
+console.log(arr);
 
 
 
