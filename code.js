@@ -270,11 +270,38 @@
 // arr.sort((a, b) => b - a)
 // console.log(arr)
 
-let arr = [ 'réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu' ];
-arr.sort((a, b) => {
-	return a.localeCompare(b);
+// let arr = [ 'réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu' ];
+// arr.sort((a, b) => {
+// 	return a.localeCompare(b);
+// });
+// console.log(arr);
+
+let persons = [
+	{ name: 'Emil', age: 38 },
+	{ name: 'Tatev', age: 30 },
+	{ name: 'Michael', age: 6 },
+	{ name: 'Adele', age: 0 },
+	{ name: 'Victoria', age: 4 }
+];
+persons.sort((a, b) => {
+	if (a.age < b.age) {
+		return -1;
+	} else if (a.age > b.age) {
+		return 1;
+	} else {
+		if (a.name < b.name) {
+            return -1
+        } else if (a.name > b.name) {
+            return 1
+        } else {
+            return 0
+        }
+	}
 });
-console.log(arr);
+// or
+persons.sort((a, b) => a.age - b.age);
+console.log(persons);
+
 
 
 
