@@ -276,31 +276,40 @@
 // });
 // console.log(arr);
 
-let persons = [
-	{ name: 'Emil', age: 38 },
-	{ name: 'Tatev', age: 30 },
-	{ name: 'Michael', age: 6 },
-	{ name: 'Adele', age: 0 },
-	{ name: 'Victoria', age: 4 }
-];
-persons.sort((a, b) => {
-	if (a.age < b.age) {
-		return -1;
-	} else if (a.age > b.age) {
-		return 1;
-	} else {
-		if (a.name < b.name) {
-            return -1
-        } else if (a.name > b.name) {
-            return 1
-        } else {
-            return 0
-        }
-	}
-});
-// or
-persons.sort((a, b) => a.age - b.age);
-console.log(persons);
+// let persons = [
+// 	{ name: 'Emil', age: 38 },
+// 	{ name: 'Tatev', age: 30 },
+// 	{ name: 'Michael', age: 6 },
+// 	{ name: 'Adele', age: 0 },
+// 	{ name: 'Victoria', age: 4 }
+// ];
+// persons.sort((a, b) => {
+// 	if (a.age < b.age) {
+// 		return -1;
+// 	} else if (a.age > b.age) {
+// 		return 1;
+// 	} else {
+// 		if (a.name < b.name) {
+//             return -1
+//         } else if (a.name > b.name) {
+//             return 1
+//         } else {
+//             return 0
+//         }
+// 	}
+// });
+// // or
+// persons.sort((a, b) => a.age - b.age);
+// console.log(persons);
+
+
+// IndexOf
+const list = [1, 2, 3, 4, 5, 6, 7];
+const index = list.indexOf(4, 5); // element, search from
+console.log(index); // -1
+let str = "I am Emil Andreasyan"
+const index = str.indexOf("a", 3) // element, search from
+console.log(index)
 
 
 
