@@ -302,14 +302,30 @@
 // persons.sort((a, b) => a.age - b.age);
 // console.log(persons);
 
+// // IndexOf
+// const list = [1, 2, 3, 4, 5, 6, 7];
+// const index = list.indexOf(4, 5); // element, search from
+// console.log(index); // -1
+// let str = "I am Emil Andreasyan"
+// const index = str.indexOf("a", 3) // element, search from
+// console.log(index)
 
-// IndexOf
-const list = [1, 2, 3, 4, 5, 6, 7];
-const index = list.indexOf(4, 5); // element, search from
-console.log(index); // -1
-let str = "I am Emil Andreasyan"
-const index = str.indexOf("a", 3) // element, search from
-console.log(index)
+
+let friends = ["Emil", "Tatev", "Victoria", "Victoria", "Michael", "Adele", "Adele"]
+// indexOf returns only first matching element
+let unique = friends.filter((e, i) => friends.indexOf(e) === i)
+console.log(unique)
+// Set is a new data structure added in ES6 which stores only unique items.
+let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
+let set = new Set()
+for(const val of count){
+    set.add(val)
+}
+console.log(set)
+let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
+let set = new Set(...count);
+console.log(set);
+
 
 
 
