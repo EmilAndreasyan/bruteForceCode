@@ -310,21 +310,37 @@
 // const index = str.indexOf("a", 3) // element, search from
 // console.log(index)
 
+// let friends = ["Emil", "Tatev", "Victoria", "Victoria", "Michael", "Adele", "Adele"]
+// // indexOf returns only first matching element
+// let unique = friends.filter((e, i) => friends.indexOf(e) === i)
+// console.log(unique)
+// // Set is a new data structure added in ES6 which stores only unique items.
+// let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
+// let set = new Set()
+// for(const val of count){
+//     set.add(val)
+// }
+// console.log(set)
+// let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
+// let set = new Set(...count);
+// console.log(set);
 
-let friends = ["Emil", "Tatev", "Victoria", "Victoria", "Michael", "Adele", "Adele"]
-// indexOf returns only first matching element
-let unique = friends.filter((e, i) => friends.indexOf(e) === i)
-console.log(unique)
-// Set is a new data structure added in ES6 which stores only unique items.
-let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
-let set = new Set()
-for(const val of count){
-    set.add(val)
+// 
+function splitAndAddNumbers (n) {
+    let output = []
+    let sum = 0
+    let sNum = n.toString() // "46"
+    for (const el of sNum) {
+        output.push(parseInt(el)) // 4, 6
+       
+    }
+    for(const el of output) {
+        sum += el // 4 + 6
+    }
+    return sum
 }
-console.log(set)
-let count = [1, 2, 3, 4, 5, 1, 4, 5, 2, 6, 1, 9, 10];
-let set = new Set(...count);
-console.log(set);
+console.log(splitAndAddNumbers(46))
+
 
 
 
