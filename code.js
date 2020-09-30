@@ -325,21 +325,47 @@
 // let set = new Set(...count);
 // console.log(set);
 
-// 
-function splitAndAddNumbers (n) {
-    let output = []
-    let sum = 0
-    let sNum = n.toString() // "46"
-    for (const el of sNum) {
-        output.push(parseInt(el)) // 4, 6
+ 
+// function splitAndAddNumbers (n) {
+//     let output = []
+//     let sum = 0
+//     let sNum = n.toString() // "46"
+//     for (const el of sNum) {
+//         output.push(parseInt(el)) // 4, 6
        
+//     }
+//     for(const el of output) {
+//         sum += el // 4 + 6
+//     }
+//     return sum
+// }
+// console.log(splitAndAddNumbers(46))
+
+//Unique items from nested Array
+let arr = [[10,15], [10,14], [10,15], [7,3], [1,2], [8,9]];
+let Unique = (arr) => {
+    //To store the unique sub arrays
+    let uniques = [];
+    //To keep track of the sub arrays
+    let itemsFound = {};
+    for(let val of arr) {
+        //convert the sub array to the string
+        let stringified = JSON.stringify(val);
+        //If it is already added then skip to next element
+        if(itemsFound[stringified]) {
+           continue;
+        }
+        //Else add the value to the unique list
+        uniques.push(val);
+        //Mark it as true so that it can tracked
+        itemsFound[stringified] = true;
     }
-    for(const el of output) {
-        sum += el // 4 + 6
-    }
-    return sum
+    //Return the unique list
+    return uniques;
 }
-console.log(splitAndAddNumbers(46))
+let filtered = Unique(arr);
+console.log(filtered);
+
 
 
 
