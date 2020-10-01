@@ -341,28 +341,53 @@
 // }
 // console.log(splitAndAddNumbers(46))
 
-//Unique items from nested Array
-let arr = [[10,15], [10,14], [10,15], [7,3], [1,2], [8,9]];
+// //Unique items from nested Array
+// let arr = [[10,15], [10,14], [10,15], [7,3], [1,2], [8,9]];
+// let Unique = (arr) => {
+//     //To store the unique sub arrays
+//     let uniques = [];
+//     //To keep track of the sub arrays
+//     let itemsFound = {};
+//     for(let val of arr) {
+//         //convert the sub array to the string
+//         let stringified = JSON.stringify(val);
+//         //If it is already added then skip to next element
+//         if(itemsFound[stringified]) {
+//            continue;
+//         }
+//         //Else add the value to the unique list
+//         uniques.push(val);
+//         //Mark it as true so that it can tracked
+//         itemsFound[stringified] = true;
+//     }
+//     //Return the unique list
+//     return uniques;
+// }
+// let filtered = Unique(arr);
+// console.log(filtered);
+
+//Filtering array of objects
+const arr = [{name:'emil'}, {name:'tatev'}, {name:'emil'}, {name: 'michael'}, {name: 'victoria'}];
+
 let Unique = (arr) => {
-    //To store the unique sub arrays
+    //Store the unique
     let uniques = [];
-    //To keep track of the sub arrays
+    //Track the items added to the uniques
     let itemsFound = {};
     for(let val of arr) {
-        //convert the sub array to the string
-        let stringified = JSON.stringify(val);
-        //If it is already added then skip to next element
-        if(itemsFound[stringified]) {
-           continue;
+        //If item is already added then move to the next item
+        if(itemsFound[val.name]){
+          continue;
         }
-        //Else add the value to the unique list
+        //Else push it to the unique list
         uniques.push(val);
-        //Mark it as true so that it can tracked
-        itemsFound[stringified] = true;
+        //Mark it as added
+        itemsFound[val.name] = true;
     }
-    //Return the unique list
+    //Return the uniques
     return uniques;
 }
+
 let filtered = Unique(arr);
 console.log(filtered);
 
