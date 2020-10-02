@@ -366,30 +366,56 @@
 // let filtered = Unique(arr);
 // console.log(filtered);
 
-//Filtering array of objects
-const arr = [{name:'emil'}, {name:'tatev'}, {name:'emil'}, {name: 'michael'}, {name: 'victoria'}];
+// //Filtering array of objects
+// const arr = [{name:'emil'}, {name:'tatev'}, {name:'emil'}, {name: 'michael'}, {name: 'victoria'}];
 
+// let Unique = (arr) => {
+//     //Store the unique
+//     let uniques = [];
+//     //Track the items added to the uniques
+//     let itemsFound = {};
+//     for(let val of arr) {
+//         //If item is already added then move to the next item
+//         if(itemsFound[val.name]){
+//           continue;
+//         }
+//         //Else push it to the unique list
+//         uniques.push(val);
+//         //Mark it as added
+//         itemsFound[val.name] = true;
+//     }
+//     //Return the uniques
+//     return uniques;
+// }
+
+// let filtered = Unique(arr);
+// console.log(filtered);
+
+// filter based on the whole object
+const arr = [{name:'emil', age: 38}, {name:'tatev', age: 29}, {name:'emil', age: 38}, {name: 'michael', age: 6}, {name: 'victoria', age: 4}];
 let Unique = (arr) => {
-    //Store the unique
+    //To store the unique sub arrays
     let uniques = [];
-    //Track the items added to the uniques
+    //To keep track of the sub arrays
     let itemsFound = {};
     for(let val of arr) {
-        //If item is already added then move to the next item
-        if(itemsFound[val.name]){
-          continue;
+        //convert the sub array to the string
+        let stringified = JSON.stringify(val);
+        //If it is already added then skip to next element
+        if(itemsFound[stringified]) {
+           continue;
         }
-        //Else push it to the unique list
+        //Else add the value to the unique list
         uniques.push(val);
-        //Mark it as added
-        itemsFound[val.name] = true;
+        //Mark it as true so that it can tracked
+        itemsFound[stringified] = true;
     }
-    //Return the uniques
+    //Return the unique list
     return uniques;
 }
-
 let filtered = Unique(arr);
 console.log(filtered);
+
 
 
 
