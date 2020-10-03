@@ -391,30 +391,37 @@
 // let filtered = Unique(arr);
 // console.log(filtered);
 
-// filter based on the whole object
-const arr = [{name:'emil', age: 38}, {name:'tatev', age: 29}, {name:'emil', age: 38}, {name: 'michael', age: 6}, {name: 'victoria', age: 4}];
-let Unique = (arr) => {
-    //To store the unique sub arrays
-    let uniques = [];
-    //To keep track of the sub arrays
-    let itemsFound = {};
-    for(let val of arr) {
-        //convert the sub array to the string
-        let stringified = JSON.stringify(val);
-        //If it is already added then skip to next element
-        if(itemsFound[stringified]) {
-           continue;
-        }
-        //Else add the value to the unique list
-        uniques.push(val);
-        //Mark it as true so that it can tracked
-        itemsFound[stringified] = true;
-    }
-    //Return the unique list
-    return uniques;
-}
-let filtered = Unique(arr);
-console.log(filtered);
+// // filter based on the whole object
+// const arr = [{name:'emil', age: 38}, {name:'tatev', age: 29}, {name:'emil', age: 38}, {name: 'michael', age: 6}, {name: 'victoria', age: 4}];
+// let Unique = (arr) => {
+//     //To store the unique sub arrays
+//     let uniques = [];
+//     //To keep track of the sub arrays
+//     let itemsFound = {};
+//     for(let val of arr) {
+//         //convert the sub array to the string
+//         let stringified = JSON.stringify(val);
+//         //If it is already added then skip to next element
+//         if(itemsFound[stringified]) {
+//            continue;
+//         }
+//         //Else add the value to the unique list
+//         uniques.push(val);
+//         //Mark it as true so that it can tracked
+//         itemsFound[stringified] = true;
+//     }
+//     //Return the unique list
+//     return uniques;
+// }
+// let filtered = Unique(arr);
+// console.log(filtered);
+
+// Unique properties of array of objects
+let uniqueName = [...new Set(arr.map(person => person.name))]
+console.log(uniqueName)
+const uniqueAge = [...new Set(arr.map(person => person.age))]
+console.log(uniqueAge)
+
 
 
 
