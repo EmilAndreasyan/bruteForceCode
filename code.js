@@ -416,11 +416,29 @@
 // let filtered = Unique(arr);
 // console.log(filtered);
 
-// Unique properties of array of objects
-let uniqueName = [...new Set(arr.map(person => person.name))]
-console.log(uniqueName)
-const uniqueAge = [...new Set(arr.map(person => person.age))]
-console.log(uniqueAge)
+// // Unique properties of array of objects
+// let uniqueName = [...new Set(arr.map(person => person.name))]
+// console.log(uniqueName)
+// const uniqueAge = [...new Set(arr.map(person => person.age))]
+// console.log(uniqueAge)
+
+function test_prime(num) {
+	if (num === 1) {
+		return false;
+	} else if (num === 2) {
+		return true;
+	} else {
+		for (let i = 2; i < num; i++) {
+			if (num % i === 0) { // if there is no remainder, return false
+				return false;
+			}
+		}
+		return true;
+	}
+}
+
+console.log(test_prime(5));
+
 
 
 
