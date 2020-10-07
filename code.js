@@ -422,22 +422,32 @@
 // const uniqueAge = [...new Set(arr.map(person => person.age))]
 // console.log(uniqueAge)
 
-function test_prime(num) {
-	if (num === 1) {
-		return false;
-	} else if (num === 2) {
-		return true;
-	} else {
-		for (let i = 2; i < num; i++) {
-			if (num % i === 0) { // if there is no remainder, return false
-				return false;
-			}
-		}
-		return true;
-	}
-}
+// function test_prime(num) {
+// 	if (num === 1) {
+// 		return false;
+// 	} else if (num === 2) {
+// 		return true;
+// 	} else {
+// 		for (let i = 2; i < num; i++) {
+// 			if (num % i === 0) { // if there is no remainder, return false
+// 				return false;
+// 			}
+// 		}
+// 		return true;
+// 	}
+// }
 
-console.log(test_prime(5));
+// console.log(test_prime(5));
+
+let str = 'learnersbucket';
+let reversed = str.split('').reverse().join('')
+
+let reversed = ''
+for (let i = 0; i < str.length; i++){
+	reversed += str[i]
+}
+console.log(reversed)
+
 
 
 
