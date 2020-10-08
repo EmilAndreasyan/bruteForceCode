@@ -439,15 +439,24 @@
 
 // console.log(test_prime(5));
 
-let str = 'learnersbucket';
-let reversed = str.split('').reverse().join('')
+// let str = 'learnersbucket';
+// let reversed = str.split('').reverse().join('')
 
-let reversed = ''
-for (let i = 0; i < str.length; i++){
-	reversed += str[i]
+// let reversed = ''
+// for (let i = 0; i < str.length; i++){
+// 	reversed += str[i]
+// }
+// console.log(reversed)
+
+
+function reversedString(str, n){
+	if (n === 0) {
+		return ''
+	}
+	//return str[n-1].concat(reversedString(str, --n))
+	return str[n-1] + reversedString(str, --n) // concat == +
 }
-console.log(reversed)
-
+console.log(reversedString('Emil', 4))
 
 
 
