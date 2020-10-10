@@ -458,30 +458,42 @@
 // }
 // console.log(reversedString('Emil', 4))
 
-// Emulating private methods with closures
-let counter = (function() {
-	let privateCounter = 0;
-	function changeBy(val) {
-		privateCounter += val;
-	}
+// // Emulating private methods with closures
+// let counter = (function() {
+// 	let privateCounter = 0;
+// 	function changeBy(val) {
+// 		privateCounter += val;
+// 	}
 
-	return {
-		increment: function() {
-			changeBy(1);
-		},
-		decrement: function() {
-			changeBy(-1);
-		},
-		value: function() {
-			return privateCounter;
-		}
+// 	return {
+// 		increment: function() {
+// 			changeBy(1);
+// 		},
+// 		decrement: function() {
+// 			changeBy(-1);
+// 		},
+// 		value: function() {
+// 			return privateCounter;
+// 		}
+// 	};
+// })();
+// counter.increment();
+// counter.increment();
+// console.log(counter.value());
+// counter.decrement();
+// console.log(counter.value());
+
+let colorChanger = (function() {
+	return function change(color) {
+		console.log({ color });
 	};
 })();
-counter.increment();
-counter.increment();
-console.log(counter.value());
-counter.decrement();
-console.log(counter.value());
+
+let red = colorChanger('red');
+let green = colorChanger('green');
+let orange = colorChanger('orange');
+//console.log(red)
+
 
 
 
