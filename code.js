@@ -483,16 +483,28 @@
 // counter.decrement();
 // console.log(counter.value());
 
-let colorChanger = (function() {
-	return function change(color) {
-		console.log({ color });
-	};
-})();
+// let colorChanger = (function() {
+// 	return function change(color) {
+// 		console.log({ color });
+// 	};
+// })();
 
-let red = colorChanger('red');
-let green = colorChanger('green');
-let orange = colorChanger('orange');
+// let red = colorChanger('red');
+// let green = colorChanger('green');
+// let orange = colorChanger('orange');
 //console.log(red)
+
+function greetMaker() {
+	let greet = 'Hello World';
+	function displayGreet() {
+		console.log(greet);
+	}
+	return displayGreet;
+}
+
+var hello = greetMaker();
+hello();
+
 
 
 
