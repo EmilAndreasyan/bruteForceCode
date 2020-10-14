@@ -494,16 +494,34 @@
 // let orange = colorChanger('orange');
 //console.log(red)
 
-function greetMaker() {
-	let greet = 'Hello World';
-	function displayGreet() {
-		console.log(greet);
-	}
-	return displayGreet;
-}
+// function greetMaker() {
+// 	let greet = 'Hello World';
+// 	function displayGreet() {
+// 		console.log(greet);
+// 	}
+// 	return displayGreet;
+// }
 
-var hello = greetMaker();
-hello();
+// var hello = greetMaker();
+// hello();
+
+
+let a = 'global';
+function outer() {
+	let b = 'outer';
+	function inner() {
+      let c = 'inner'
+      console.log(c);   // prints 'inner'
+      console.log(b);   // prints 'outer'
+      console.log(a);   // prints 'global'
+    }
+    console.log(a);     // prints 'global'
+    console.log(b);     // prints 'outer'
+    inner();
+  }
+outer();
+console.log(a);         // prints 'global'
+
 
 
 
