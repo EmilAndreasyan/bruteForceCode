@@ -506,21 +506,33 @@
 // hello();
 
 
-let a = 'global';
-function outer() {
-	let b = 'outer';
-	function inner() {
-      let c = 'inner'
-      console.log(c);   // prints 'inner'
-      console.log(b);   // prints 'outer'
-      console.log(a);   // prints 'global'
-    }
-    console.log(a);     // prints 'global'
-    console.log(b);     // prints 'outer'
-    inner();
-  }
-outer();
-console.log(a);         // prints 'global'
+// let a = 'global';
+// function outer() {
+// 	let b = 'outer';
+// 	function inner() {
+//       let c = 'inner'
+//       console.log(c);   // prints 'inner'
+//       console.log(b);   // prints 'outer'
+//       console.log(a);   // prints 'global'
+//     }
+//     console.log(a);     // prints 'global'
+//     console.log(b);     // prints 'outer'
+//     inner();
+//   }
+// outer();
+// console.log(a);         // prints 'global'
+
+function simpleDoubler() {
+	let double = 2;
+	return function(val) {
+		return val * double;
+	};
+}
+let doubleFour = simpleDoubler();
+let doubleTen = simpleDoubler();
+console.log(doubleFour(4)); // 8
+console.log(doubleTen(10)); // 20
+
 
 
 
