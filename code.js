@@ -533,35 +533,33 @@
 // console.log(doubleFour(4)); // 8
 // console.log(doubleTen(10)); // 20
 
-let country = (() => {
-	return (name) => {
-		return (capital) => {
-			return (language) => {
-				return (population) => {
-					console.log(
-						`country: ${name}, capital: ${capital}, language: ${language}, population: ${population}`
-					);
-					if (population < 3000000) {
-						console.log('small population');
-					} else if (population >= 3000000 && population <= 100000000) {
-						console.log('mid-size population');
-					} else {
-						console.log('large population');
-					}
-				};
-			};
-		};
-	};
-})();
+// let country = (() => {
+// 	return (name) => {
+// 		return (capital) => {
+// 			return (language) => {
+// 				return (population) => {
+// 					console.log(
+// 						`country: ${name}, capital: ${capital}, language: ${language}, population: ${population}`
+// 					);
+// 					if (population < 3000000) {
+// 						console.log('small population');
+// 					} else if (population >= 3000000 && population <= 100000000) {
+// 						console.log('mid-size population');
+// 					} else {
+// 						console.log('large population');
+// 					}
+// 				};
+// 			};
+// 		};
+// 	};
+// })();
 
-let malta = country('Malta')('Valletta')('Maltese')(514564);
-let france = country('France')('Paris')('French')(65273511);
-let usa = country('USA')('Washington')('English')(331002651);
+// let malta = country('Malta')('Valletta')('Maltese')(514564);
+// let france = country('France')('Paris')('French')(65273511);
+// let usa = country('USA')('Washington')('English')(331002651);
 
-
-
-
-
+console.log(Array.from('foo'));
+console.log(Array.from([1, 2, 3], x => x + x));
 
 
 
