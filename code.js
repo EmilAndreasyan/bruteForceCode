@@ -558,8 +558,12 @@
 // let france = country('France')('Paris')('French')(65273511);
 // let usa = country('USA')('Washington')('English')(331002651);
 
-console.log(Array.from('foo'));
-console.log(Array.from([1, 2, 3], x => x + x));
+// console.log(Array.from('foo'));
+// console.log(Array.from([1, 2, 3], x => x + x));
+
+const set = new Set(['hello', 'goodbye', 'david', 'hello']);
+Array.from(set);
+// [ "hello", "goodbye", "david" ]
 
 
 
