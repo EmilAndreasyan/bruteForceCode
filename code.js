@@ -627,17 +627,6 @@
 // console.log(greet)
 // //console.log(france.sayHello.prototype)
 
-function person(){
-    console.log(`${this.name} is ${this.age} years old`) // this becomes the variable it is called on
-}
-
-let john = {
-    name: "John",
-    age: 34
-}
-
-person.call(john)
-
 // function person(){
 //     console.log(`${this.name} is ${this.age} years old`) // this becomes the variable it is called on
 // }
@@ -647,8 +636,19 @@ person.call(john)
 //     age: 34
 // }
 
-// person = person.bind(john)
-// person()
+// person.call(john)
+
+function person(){
+    console.log(`${this.name} is ${this.age} years old`) // this becomes the variable it is called on
+}
+
+let john = {
+    name: "John",
+    age: 34
+}
+
+person = person.bind(john)
+person()
 
 
 
