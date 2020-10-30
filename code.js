@@ -638,39 +638,43 @@
 
 // person.call(john)
 
-function person(){
-    console.log(`${this.name} is ${this.age} years old`) // this becomes the variable it is called on
-}
-
-let john = {
-    name: "John",
-    age: 34
-}
-
-person = person.bind(john)
-person()
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function toTravelOrNotToTravel(amount) {
-// 	if (amount >= 10000) {
-// 		console.log("We're leaving for Italy!!");
-// 	} else {
-// 		let remainder = 10000 - amount > 1 ? `${10000 - amount} dollars` : `${10000 - amount} dollar`;
-// 		console.log(`we're ${remainder} short, we must watch movies instead`);
-// 	}
+// function person(){
+//     console.log(`${this.name} is ${this.age} years old`) // this becomes the variable it is called on
 // }
-// toTravelOrNotToTravel(7000);
+
+// let john = {
+//     name: "John",
+//     age: 34
+// }
+
+// person = person.bind(john)
+// person()
+
+// arr = [0, 5, 4, 6, 7, 2, 2]
+// function countNumbers(arr) {
+
+//     let result = []
+//     let iterator = arr.values()
+    
+//     for (const el of iterator){
+//         debugger
+//         if (el === el) {
+//             result.push(el)
+//         }
+//     }
+//     return result
+// }
+// console.log(countNumbers(arr))
+
+function toTravelOrNotToTravel(amount) {
+	if (amount >= 10000) {
+		console.log("We're leaving for Italy!!");
+	} else {
+		let remainder = 10000 - amount > 1 ? `${10000 - amount} dollars` : `${10000 - amount} dollar`;
+		console.log(`we're ${remainder} short, we must watch movies instead`);
+	}
+}
+toTravelOrNotToTravel(7000);
 
 // console.log(false == true); // false
 // console.log(null == true); // false
