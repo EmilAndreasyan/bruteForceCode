@@ -666,38 +666,38 @@
 // }
 // console.log(countNumbers(arr))
 
-function toTravelOrNotToTravel(amount) {
-	if (amount >= 10000) {
-		console.log("We're leaving for Italy!!");
-	} else {
-		let remainder = 10000 - amount > 1 ? `${10000 - amount} dollars` : `${10000 - amount} dollar`;
-		console.log(`we're ${remainder} short, we must watch movies instead`);
-	}
-}
-toTravelOrNotToTravel(7000);
+// function toTravelOrNotToTravel(amount) {
+// 	if (amount >= 10000) {
+// 		console.log("We're leaving for Italy!!");
+// 	} else {
+// 		let remainder = 10000 - amount > 1 ? `${10000 - amount} dollars` : `${10000 - amount} dollar`;
+// 		console.log(`we're ${remainder} short, we must watch movies instead`);
+// 	}
+// }
+// toTravelOrNotToTravel(7000);
 
-// console.log(false == true); // false
-// console.log(null == true); // false
-// console.log(null == false); // false
-// console.log(null === null); // true
-// console.log(0 == true); // false
-// console.log(1 == true); // true
-// console.log(1 === true); // false
-// console.log('' == true); // false
-// console.log('hi' == true); // false
-// console.log([] == true); // false
-// console.log([ 1, 2 ] == true); // false
-// console.log({} == true); // false
-// console.log({ name: 'John' } == true); // false
-// console.log(!true); // false
-// console.log(!!true); // true
-// console.log(!false); // true
-// console.log(!!false); // false
-// console.log(true === !false); // true
-// console.log(false === false); // true
-// console.log(NaN == true); // false
-// console.log(NaN == false); // false
-// console.log(NaN == NaN); // false
+console.log(false == true); // false
+console.log(null == true); // false
+console.log(null == false); // false
+console.log(null === null); // true
+console.log(0 == true); // false
+console.log(1 == true); // true
+console.log(1 === true); // false
+console.log('' == true); // false
+console.log('hi' == true); // false
+console.log([] == true); // false
+console.log([ 1, 2 ] == true); // false
+console.log({} == true); // false
+console.log({ name: 'John' } == true); // false
+console.log(!true); // false
+console.log(!!true); // true
+console.log(!false); // true
+console.log(!!false); // false
+console.log(true === !false); // true
+console.log(false === false); // true
+console.log(NaN == true); // false
+console.log(NaN == false); // false
+console.log(NaN == NaN); // false
 
 // function travelCriteria(name, amount, age) {
 // 	if (name && amount >= 10000 && age >= 18) {
