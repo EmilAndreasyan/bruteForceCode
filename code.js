@@ -676,39 +676,39 @@
 // }
 // toTravelOrNotToTravel(7000);
 
-console.log(false == true); // false
-console.log(null == true); // false
-console.log(null == false); // false
-console.log(null === null); // true
-console.log(0 == true); // false
-console.log(1 == true); // true
-console.log(1 === true); // false
-console.log('' == true); // false
-console.log('hi' == true); // false
-console.log([] == true); // false
-console.log([ 1, 2 ] == true); // false
-console.log({} == true); // false
-console.log({ name: 'John' } == true); // false
-console.log(!true); // false
-console.log(!!true); // true
-console.log(!false); // true
-console.log(!!false); // false
-console.log(true === !false); // true
-console.log(false === false); // true
-console.log(NaN == true); // false
-console.log(NaN == false); // false
-console.log(NaN == NaN); // false
+// console.log(false == true); // false
+// console.log(null == true); // false
+// console.log(null == false); // false
+// console.log(null === null); // true
+// console.log(0 == true); // false
+// console.log(1 == true); // true
+// console.log(1 === true); // false
+// console.log('' == true); // false
+// console.log('hi' == true); // false
+// console.log([] == true); // false
+// console.log([ 1, 2 ] == true); // false
+// console.log({} == true); // false
+// console.log({ name: 'John' } == true); // false
+// console.log(!true); // false
+// console.log(!!true); // true
+// console.log(!false); // true
+// console.log(!!false); // false
+// console.log(true === !false); // true
+// console.log(false === false); // true
+// console.log(NaN == true); // false
+// console.log(NaN == false); // false
+// console.log(NaN == NaN); // false
 
-// function travelCriteria(name, amount, age) {
-// 	if (name && amount >= 10000 && age >= 18) {
-// 		console.log(
-// 			`Hello, ${name}, you have ${amount} dollars on your account and you're grown up enough for a great adventure!`
-// 		);
-// 	} else {
-// 		console.log('unfortunately, you can travel to Italy only using your imagination...');
-// 	}
-// }
-// travelCriteria('Adam', 10000, 20);
+function travelCriteria(name, amount, age) {
+	if (name && amount >= 10000 && age >= 18) {
+		console.log(
+			`Hello, ${name}, you have ${amount} dollars on your account and you're grown up enough for a great adventure!`
+		);
+	} else {
+		console.log('unfortunately, you can travel to Italy only using your imagination...');
+	}
+}
+travelCriteria('Adam', 10000, 20);
 
 // function flightEligibility(dollars) {
 // 	let flight = false;
