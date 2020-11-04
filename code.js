@@ -699,29 +699,29 @@
 // console.log(NaN == false); // false
 // console.log(NaN == NaN); // false
 
-function travelCriteria(name, amount, age) {
-	if (name && amount >= 10000 && age >= 18) {
-		console.log(
-			`Hello, ${name}, you have ${amount} dollars on your account and you're grown up enough for a great adventure!`
-		);
-	} else {
-		console.log('unfortunately, you can travel to Italy only using your imagination...');
-	}
-}
-travelCriteria('Adam', 10000, 20);
-
-// function flightEligibility(dollars) {
-// 	let flight = false;
-// 	let visaIssued = false;
-// 	let convertedEuros;
-// 	if (dollars >= 10000) {
-// 		flight = true;
-// 		visaIssued = true;
-// 		convertedEuros = (dollars * 0.84) + ' euros';
-// 		console.log(`Welcome to Italy, you have ${convertedEuros} on your account. Spend it sparingly!`);
+// function travelCriteria(name, amount, age) {
+// 	if (name && amount >= 10000 && age >= 18) {
+// 		console.log(
+// 			`Hello, ${name}, you have ${amount} dollars on your account and you're grown up enough for a great adventure!`
+// 		);
 // 	} else {
-// 		console.log('not enough funds');
+// 		console.log('unfortunately, you can travel to Italy only using your imagination...');
 // 	}
 // }
+// travelCriteria('Adam', 10000, 20);
 
-// flightEligibility(20000);
+function flightEligibility(dollars) {
+	let flight = false;
+	let visaIssued = false;
+	let convertedEuros;
+	if (dollars >= 10000) {
+		flight = true;
+		visaIssued = true;
+		convertedEuros = (dollars * 0.84) + ' euros';
+		console.log(`Welcome to Italy, you have ${convertedEuros} on your account. Spend it sparingly!`);
+	} else {
+		console.log('not enough funds');
+	}
+}
+
+flightEligibility(20000);
