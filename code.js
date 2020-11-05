@@ -710,18 +710,23 @@
 // }
 // travelCriteria('Adam', 10000, 20);
 
-function flightEligibility(dollars) {
-	let flight = false;
-	let visaIssued = false;
-	let convertedEuros;
-	if (dollars >= 10000) {
-		flight = true;
-		visaIssued = true;
-		convertedEuros = (dollars * 0.84) + ' euros';
-		console.log(`Welcome to Italy, you have ${convertedEuros} on your account. Spend it sparingly!`);
-	} else {
-		console.log('not enough funds');
-	}
-}
+// function flightEligibility(dollars) {
+// 	let flight = false;
+// 	let visaIssued = false;
+// 	let convertedEuros;
+// 	if (dollars >= 10000) {
+// 		flight = true;
+// 		visaIssued = true;
+// 		convertedEuros = (dollars * 0.84) + ' euros';
+// 		console.log(`Welcome to Italy, you have ${convertedEuros} on your account. Spend it sparingly!`);
+// 	} else {
+// 		console.log('not enough funds');
+// 	}
+// }
 
-flightEligibility(20000);
+// flightEligibility(20000);
+
+Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
