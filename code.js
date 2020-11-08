@@ -726,7 +726,13 @@
 
 // flightEligibility(20000);
 
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
+// Array.isArray([1, 2, 3]);  // true
+// Array.isArray({foo: 123}); // false
+// Array.isArray('foobar');   // false
+// Array.isArray(undefined);  // false
+
+Array.of(7);       // [7] 
+Array.of(1, 2, 3); // [1, 2, 3]
+
+Array(7);          // array of 7 empty slots
+Array(1, 2, 3);    // [1, 2, 3]
