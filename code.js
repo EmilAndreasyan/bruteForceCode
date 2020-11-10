@@ -737,14 +737,22 @@
 // Array(7);          // array of 7 empty slots
 // Array(1, 2, 3);    // [1, 2, 3]
 
-if (!Array.of) {
-    Array.of = function() {
-      return Array.prototype.slice.call(arguments);
-      // Or 
-      let vals = [];
-      for(let prop in arguments){
-          vals.push(arguments[prop]);
-      }
-      return vals;
-    }
-  }
+// if (!Array.of) {
+//     Array.of = function() {
+//       return Array.prototype.slice.call(arguments);
+//       // Or 
+//       let vals = [];
+//       for(let prop in arguments){
+//           vals.push(arguments[prop]);
+//       }
+//       return vals;
+//     }
+//   }
+
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// expected output: Array ["a", "b", "c", "d", "e", "f"]
+
