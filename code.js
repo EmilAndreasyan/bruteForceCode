@@ -833,3 +833,7 @@ console.log(iterator1.next().value);
 
 console.log(iterator1.next().value);
 // expected output: Array [1, "b"]
+
+const a = ['a', 'b', 'c'];
+for(const [inx, elem] of a.entries())
+console.log(inx, elem)
