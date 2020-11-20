@@ -824,16 +824,36 @@
 
 // console.log(twoSum(nums, target))
 
-const array1 = ['a', 'b', 'c'];
+// const array1 = ['a', 'b', 'c'];
 
-const iterator1 = array1.entries();
+// const iterator1 = array1.entries();
 
-console.log(iterator1.next().value);
-// expected output: Array [0, "a"]
+// console.log(iterator1.next().value);
+// // expected output: Array [0, "a"]
 
-console.log(iterator1.next().value);
-// expected output: Array [1, "b"]
+// console.log(iterator1.next().value);
+// // expected output: Array [1, "b"]
 
-const a = ['a', 'b', 'c'];
-for(const [inx, elem] of a.entries())
-console.log(inx, elem)
+// const a = ['a', 'b', 'c'];
+// for(const [inx, elem] of a.entries())
+// console.log(inx, elem)
+
+function twoPointers(arr, target){
+    let found = []
+    
+    for(let i = 0; i < arr.length; i++){
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target) {
+           break
+                
+            }
+            
+            
+            found.push(arr[i], arr[j])
+        }
+       return found
+    }
+}
+let target = 9
+let arr = [2, 7, 15, 17]
+console.log(twoPointers(arr, target))
