@@ -843,31 +843,45 @@ function twoPointers(arr, target){
     
     for(let i = 0; i < arr.length; i++){
         for (let j = 0; j < arr.length; j++) {
-            if (arr[i] + arr[j] === target) {
-           break
-                
-            }
-            
-            
-            found.push(arr[i], arr[j])
+            if (arr[i] + arr[j] !== target) {
+           continue
         }
+        
+        
+        found.push(arr[i], arr[j])
+    }
        return found
     }
 }
 let target = 9
 let arr = [2, 7, 15, 17]
 console.log(twoPointers(arr, target))
+// should return [0, 1] indexes of array
 
 
-const isBelowThreshold = (currentValue) => currentValue < 40;
+// const isBelowThreshold = (currentValue) => currentValue < 40;
 
-const array1 = [1, 30, 39, 29, 10, 13];
+// const array1 = [1, 30, 39, 29, 10, 13];
 
-console.log(array1.every(isBelowThreshold));
-// expected output: true
+// console.log(array1.every(isBelowThreshold));
+// // expected output: true
 
-function isBigEnough(element, index, array) {
-    return element >= 10;
-  }
-  [12, 5, 8, 130, 44].every(isBigEnough);   // false
-  [12, 54, 18, 130, 44].every(isBigEnough); // true
+// function isBigEnough(element, index, array) {
+//     return element >= 10;
+//   }
+//   [12, 5, 8, 130, 44].every(isBigEnough);   // false
+//   [12, 54, 18, 130, 44].every(isBigEnough); // true
+
+const array1 = [1, 2, 3, 4];
+
+// fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// expected output: [1, 2, 0, 0]
+
+// fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// expected output: [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// expected output: [6, 6, 6, 6]
+
