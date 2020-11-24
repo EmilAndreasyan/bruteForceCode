@@ -892,3 +892,6 @@ const result = words.filter(word => word.length > 6);
 console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
 
+const names = ['Emil', 'Tatevik', 'Adele', 'Victoria', 'Michael']
+const filteredNames = names.filter(name => name.length > 5);
+console.log(filteredNames)
