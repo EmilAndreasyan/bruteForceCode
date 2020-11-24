@@ -885,3 +885,10 @@ console.log(array1.fill(5, 1));
 console.log(array1.fill(6));
 // expected output: [6, 6, 6, 6]
 
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
