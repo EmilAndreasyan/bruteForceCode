@@ -326,20 +326,20 @@
 // console.log(set);
 
  
-// function splitAndAddNumbers (n) {
-//     let output = []
-//     let sum = 0
-//     let sNum = n.toString() // "46"
-//     for (const el of sNum) {
-//         output.push(parseInt(el)) // 4, 6
+function splitAndAddNumbers (n) {
+    let output = []
+    let sum = 0
+    let sNum = n.toString() // "46"
+    for (const el of sNum) {
+        output.push(parseInt(el)) // 4, 6
        
-//     }
-//     for(const el of output) {
-//         sum += el // 4 + 6
-//     }
-//     return sum
-// }
-// console.log(splitAndAddNumbers(46))
+    }
+    for(const el of output) {
+        sum += el // 4 + 6
+    }
+    return sum
+}
+console.log(splitAndAddNumbers(46))
 
 // //Unique items from nested Array
 // let arr = [[10,15], [10,14], [10,15], [7,3], [1,2], [8,9]];
@@ -895,3 +895,10 @@ console.log(result);
 const names = ['Emil', 'Tatevik', 'Adele', 'Victoria', 'Michael']
 const filteredNames = names.filter(name => name.length > 5);
 console.log(filteredNames)
+
+function isBigEnough(value) {
+    return value >= 10
+  }
+  
+  let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
+  // filtered is [12, 130, 44]
