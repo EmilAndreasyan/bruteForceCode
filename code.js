@@ -933,6 +933,17 @@ function filterItems(arr, query) {
   })
 }
 
-
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+
+// Modifying each words
+let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+
+const modifiedWords = words.filter( (word, index, arr) => {
+  arr[index+1] +=' extra'
+  return word.length < 6
+})
+
+console.log(modifiedWords)
+// Notice there are three words below length 6, but since they've been modified one is returned
+// ["spray"]
