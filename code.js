@@ -927,5 +927,12 @@ function filterItems(arr, query) {
   })
 }
 
+function filterItems(arr, query) {
+  return arr.filter(function(el) {
+      return el.toLowerCase().includes(query.toLowerCase())
+  })
+}
+
+
 console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
