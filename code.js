@@ -958,3 +958,14 @@ const appendedWords = words.filter( (word, index, arr) => {
 console.log(appendedWords)
 // Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
 // ["spray" ,"limit" ,"elite"]
+
+// Deleting words
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+const deleteWords = words.filter( (word, index, arr) => {
+  arr.pop()
+  return word.length < 6
+})
+
+console.log(deleteWords)
+// Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
+// ["spray" ,"limit"]
