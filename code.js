@@ -838,26 +838,62 @@ console.log(splitAndAddNumbers(46))
 // for(const [inx, elem] of a.entries())
 // console.log(inx, elem)
 
-function twoPointers(arr, target){
-    let found = []
+// function twoPointers(arr, target){
+//     let found = []
     
-    for(let i = 0; i < arr.length; i++){
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] + arr[j] !== target) {
-           continue
-        }
+//     for(let i = 0; i < arr.length; i++){
+//         for (let j = 0; j < arr.length; j++) {
+//             if (arr[i] + arr[j] !== target) {
+//            continue
+//         }
         
         
-        found.push(arr[i], arr[j])
+//         found.push(arr[i], arr[j])
+//     }
+//        return found
+//     }
+// }
+
+function twoPointers(arr, target){
+  let found = [];
+  for(const i of arr){
+    for(const j of arr){
+      if (i + j === target) {
+       // continue;
+     // debugger
+        found.push(i, j)
+      }
     }
-       return found
-    }
+   // return [0, 1]
+    return found
+  }
 }
+
 let target = 9
 let arr = [2, 7, 15, 17]
 console.log(twoPointers(arr, target))
 // should return [0, 1] indexes of array
 
+
+let nums = [0,1,0,3,12]
+
+function moveZeros(nums){
+  let zerosAtEnd = []
+  let result = []
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[j] == 0) { 
+        j++
+      }  else if (nums[j] < nums[i]) {
+        nums[i] = nums[j]
+        result.push(i)
+      } 
+    }
+  }
+  return result
+}
+
+console.log(moveZeros(nums))
 
 // const isBelowThreshold = (currentValue) => currentValue < 40;
 
@@ -916,56 +952,63 @@ console.log(twoPointers(arr, target))
 
 // console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
-let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+// let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
-/**
- * Filter array items based on search criteria (query)
- */
-function filterItems(arr, query) {
-  return arr.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  })
-}
+// /**
+//  * Filter array items based on search criteria (query)
+//  */
+// function filterItems(arr, query) {
+//   return arr.filter(function(el) {
+//       return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+//   })
+// }
 
-function filterItems(arr, query) {
-  return arr.filter(function(el) {
-      return el.toLowerCase().includes(query.toLowerCase())
-  })
-}
+// function filterItems(arr, query) {
+//   return arr.filter(function(el) {
+//       return el.toLowerCase().includes(query.toLowerCase())
+//   })
+// }
 
-console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+// console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
+// console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
 
-// Modifying each words
-let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+// // Modifying each words
+// let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
 
-const modifiedWords = words.filter( (word, index, arr) => {
-  arr[index+1] +=' extra'
-  return word.length < 6
-})
+// const modifiedWords = words.filter( (word, index, arr) => {
+//   arr[index+1] +=' extra'
+//   return word.length < 6
+// })
 
-console.log(modifiedWords)
-// Notice there are three words below length 6, but since they've been modified one is returned
-// ["spray"]
+// console.log(modifiedWords)
+// // Notice there are three words below length 6, but since they've been modified one is returned
+// // ["spray"]
 
-// Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
-const appendedWords = words.filter( (word, index, arr) => {
-  arr.push('new')
-  return word.length < 6
-})
+// // Appending new words
+// words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+// const appendedWords = words.filter( (word, index, arr) => {
+//   arr.push('new')
+//   return word.length < 6
+// })
 
-console.log(appendedWords)
-// Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
-// ["spray" ,"limit" ,"elite"]
+// console.log(appendedWords)
+// // Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
+// // ["spray" ,"limit" ,"elite"]
 
-// Deleting words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) => {
-  arr.pop()
-  return word.length < 6
-})
+// // Deleting words
+// words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+// const deleteWords = words.filter( (word, index, arr) => {
+//   arr.pop()
+//   return word.length < 6
+// })
 
-console.log(deleteWords)
-// Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
-// ["spray" ,"limit"]
+// console.log(deleteWords)
+// // Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
+// // ["spray" ,"limit"]
+
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// expected output: 12
