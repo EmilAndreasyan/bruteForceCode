@@ -1012,3 +1012,15 @@ const found = array1.find(element => element > 10);
 
 console.log(found);
 // expected output: 12
+
+const inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
+];
+
+function isCherries(friut){
+  return friut.name === 'cherries'
+}
+
+console.log(inventory.find(isCherries))
