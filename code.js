@@ -1035,15 +1035,22 @@ console.log(moveZeros(nums))
 
 // console.log(result) // { name: 'cherries', quantity: 5 }
 
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
-    }
-  }
-  return element > 1;
-}
+// function isPrime(element, index, array) {
+//   let start = 2;
+//   while (start <= Math.sqrt(element)) {
+//     if (element % start++ < 1) {
+//       return false;
+//     }
+//   }
+//   return element > 1;
+// }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
-console.log([4, 5, 8, 12].find(isPrime)); // 5
+// console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+// console.log([4, 5, 8, 12].find(isPrime)); // 5
+
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// expected output: 3
