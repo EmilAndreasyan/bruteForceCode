@@ -1048,9 +1048,21 @@ console.log(moveZeros(nums))
 // console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 // console.log([4, 5, 8, 12].find(isPrime)); // 5
 
-const array1 = [5, 12, 8, 130, 44];
+// const array1 = [5, 12, 8, 130, 44];
 
-const isLargeNumber = (element) => element > 13;
+// const isLargeNumber = (element) => element > 13;
 
-console.log(array1.findIndex(isLargeNumber));
-// expected output: 3
+// console.log(array1.findIndex(isLargeNumber));
+// // expected output: 3
+
+function isPrime(num){
+  for(let i = 2; num > i; i++){
+    if(num % i === 0) {
+      return false
+    }
+  }
+  return num > 1 // true
+}
+
+console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
+console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
