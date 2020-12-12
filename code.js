@@ -1055,14 +1055,21 @@ console.log(moveZeros(nums))
 // console.log(array1.findIndex(isLargeNumber));
 // // expected output: 3
 
-function isPrime(num){
-  for(let i = 2; num > i; i++){
-    if(num % i === 0) {
-      return false
-    }
-  }
-  return num > 1 // true
-}
+// function isPrime(num){
+//   for(let i = 2; num > i; i++){
+//     if(num % i === 0) {
+//       return false
+//     }
+//   }
+//   return num > 1 // true
+// }
 
-console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
-console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
+// console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
+// console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
+
+const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+
+const index = fruits.findIndex(fruit => fruit === "cantaloupe")
+
+console.log(index); // 2
+console.log(fruits[index]); // cantaloupe
