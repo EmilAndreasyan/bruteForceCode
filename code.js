@@ -1074,23 +1074,34 @@ console.log(moveZeros(nums))
 // console.log(index); // 2
 // console.log(fruits[index]); // cantaloupe
 
-const arr1 = [0, 1, 2, [3, 4]];
+// const arr1 = [0, 1, 2, [3, 4]];
 
-console.log(arr1.flat());
-// expected output: [0, 1, 2, 3, 4]
+// console.log(arr1.flat());
+// // expected output: [0, 1, 2, 3, 4]
 
-const arr2 = [0, 1, 2, [[[3, 4]]]];
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
 
-console.log(arr2.flat(2));
-// expected output: [0, 1, 2, [3, 4]]
+// console.log(arr2.flat(2));
+// // expected output: [0, 1, 2, [3, 4]]
 
-const arr = [1, 2, [3, 4]];
+// const arr = [1, 2, [3, 4]];
 
-// To flat single level array
-arr.flat();
-// is equivalent to
-arr.reduce((acc, val) => acc.concat(val), []);
-// [1, 2, 3, 4]
+// // To flat single level array
+// arr.flat();
+// // is equivalent to
+// arr.reduce((acc, val) => acc.concat(val), []);
+// // [1, 2, 3, 4]
 
-// or with decomposition syntax
-const flattened = arr => [].concat(...arr);
+// // or with decomposition syntax
+// const flattened = arr => [].concat(...arr);
+
+const arr = [1, 2, [3, 4, [5, 6]]];
+
+// to enable deep level flatten use recursion with reduce and concat
+function flatDeep(arr, d = 1) {
+   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+                : arr.slice();
+};
+
+flatDeep(arr, Infinity);
+// [1, 2, 3, 4, 5, 6]
