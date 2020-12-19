@@ -1105,3 +1105,11 @@ function flatDeep(arr, d = 1) {
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
+
+const arr1 = [1, 2, [3, 4]];
+arr1.flat();
+// [1, 2, 3, 4]
+
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1, 2, 3, 4, [5, 6]]
