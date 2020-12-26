@@ -1122,9 +1122,21 @@ console.log(moveZeros(nums))
 // arr4.flat(Infinity);
 // // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-var arr = [1, 2, 3, 4];
+// var arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
-// is equivalent to
-arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
-// [1, 2, 2, 4, 3, 6, 4, 8]
+// arr.flatMap(x => [x, x * 2]);
+// // is equivalent to
+// arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
+// // [1, 2, 2, 4, 3, 6, 4, 8]
+
+let arr1 = [1, 2, 3, 4];
+
+arr1.map(x => [x * 2]);
+// [[2], [4], [6], [8]]
+
+arr1.flatMap(x => [x * 2]);
+// [2, 4, 6, 8]
+
+// only one level is flattened
+arr1.flatMap(x => [[x * 2]]);
+// [[2], [4], [6], [8]]
