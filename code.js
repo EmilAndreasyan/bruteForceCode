@@ -1095,29 +1095,36 @@ console.log(moveZeros(nums))
 // // or with decomposition syntax
 // const flattened = arr => [].concat(...arr);
 
-const arr = [1, 2, [3, 4, [5, 6]]];
+// const arr = [1, 2, [3, 4, [5, 6]]];
 
-// to enable deep level flatten use recursion with reduce and concat
-function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+// // to enable deep level flatten use recursion with reduce and concat
+// function flatDeep(arr, d = 1) {
+//    return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+//                 : arr.slice();
+// };
 
-flatDeep(arr, Infinity);
-// [1, 2, 3, 4, 5, 6]
+// flatDeep(arr, Infinity);
+// // [1, 2, 3, 4, 5, 6]
 
-const arr1 = [1, 2, [3, 4]];
-arr1.flat();
-// [1, 2, 3, 4]
+// const arr1 = [1, 2, [3, 4]];
+// arr1.flat();
+// // [1, 2, 3, 4]
 
-const arr2 = [1, 2, [3, 4, [5, 6]]];
-arr2.flat();
-// [1, 2, 3, 4, [5, 6]]
+// const arr2 = [1, 2, [3, 4, [5, 6]]];
+// arr2.flat();
+// // [1, 2, 3, 4, [5, 6]]
 
-const arr3 = [1, 2, [3, 4, [5, 6]]];
-arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]
+// const arr3 = [1, 2, [3, 4, [5, 6]]];
+// arr3.flat(2);
+// // [1, 2, 3, 4, 5, 6]
 
-const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
-arr4.flat(Infinity);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+// arr4.flat(Infinity);
+// // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+var arr = [1, 2, 3, 4];
+
+arr.flatMap(x => [x, x * 2]);
+// is equivalent to
+arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
+// [1, 2, 2, 4, 3, 6, 4, 8]
