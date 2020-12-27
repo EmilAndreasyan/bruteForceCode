@@ -1141,10 +1141,24 @@ console.log(moveZeros(nums))
 // arr1.flatMap(x => [[x * 2]]);
 // // [[2], [4], [6], [8]]
 
-let arr1 = ["it's Sunny in", "", "California"];
+// let arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
-// [["it's","Sunny","in"],[""],["California"]]
+// arr1.map(x => x.split(" "));
+// // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
-// ["it's","Sunny","in", "", "California"]
+// arr1.flatMap(x => x.split(" "));
+// // ["it's","Sunny","in", "", "California"]
+
+// Let's say we want to remove all the negative numbers
+// and split the odd numbers into an even number and a 1
+let a = [5, 4, -3, 20, 17, -33, -4, 18]
+//       |\  \  x   |  | \   x   x   |
+//      [4,1, 4,   20, 16, 1,       18]
+
+a.flatMap( (n) =>
+  (n < 0) ?      [] :
+  (n % 2 == 0) ? [n] :
+                 [n-1, 1]
+)
+
+// expected output: [4, 1, 4, 20, 16, 1, 18]
