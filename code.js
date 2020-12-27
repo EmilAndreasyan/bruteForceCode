@@ -1129,14 +1129,22 @@ console.log(moveZeros(nums))
 // arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 // // [1, 2, 2, 4, 3, 6, 4, 8]
 
-let arr1 = [1, 2, 3, 4];
+// let arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
-// [[2], [4], [6], [8]]
+// arr1.map(x => [x * 2]);
+// // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
-// [2, 4, 6, 8]
+// arr1.flatMap(x => [x * 2]);
+// // [2, 4, 6, 8]
 
-// only one level is flattened
-arr1.flatMap(x => [[x * 2]]);
-// [[2], [4], [6], [8]]
+// // only one level is flattened
+// arr1.flatMap(x => [[x * 2]]);
+// // [[2], [4], [6], [8]]
+
+let arr1 = ["it's Sunny in", "", "California"];
+
+arr1.map(x => x.split(" "));
+// [["it's","Sunny","in"],[""],["California"]]
+
+arr1.flatMap(x => x.split(" "));
+// ["it's","Sunny","in", "", "California"]
