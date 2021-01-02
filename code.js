@@ -1203,15 +1203,27 @@ console.log(moveZeros(nums))
 // // numCallbackRuns: 3
 // // comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
 
-const items = ['item1', 'item2', 'item3']
-const copyItems = []
+// const items = ['item1', 'item2', 'item3']
+// const copyItems = []
 
-// before
-for (let i = 0; i < items.length; i++) {
-  copyItems.push(items[i])
+// // before
+// for (let i = 0; i < items.length; i++) {
+//   copyItems.push(items[i])
+// }
+
+// // after
+// items.forEach(function(item){
+//   copyItems.push(item)
+// })
+
+function logArrayElements(element, index, array) {
+  console.log('a[' + index + '] = ' + element)
 }
 
-// after
-items.forEach(function(item){
-  copyItems.push(item)
-})
+// Notice that index 2 is skipped, since there is no item at
+// that position in the array...
+[2, 5, , 9].forEach(logArrayElements)
+// logs:
+// a[0] = 2
+// a[1] = 5
+// a[3] = 9
