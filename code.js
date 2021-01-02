@@ -1187,18 +1187,31 @@ console.log(moveZeros(nums))
 // // Naively expected output: 14
 // // Actual output: 0
 
-const arraySparse = [1,3,,7]
-let numCallbackRuns = 0
+// const arraySparse = [1,3,,7]
+// let numCallbackRuns = 0
 
-arraySparse.forEach(function(element) {
-  console.log(element)
-  numCallbackRuns++
+// arraySparse.forEach(function(element) {
+//   console.log(element)
+//   numCallbackRuns++
+// })
+
+// console.log("numCallbackRuns: ", numCallbackRuns)
+
+// // 1
+// // 3
+// // 7
+// // numCallbackRuns: 3
+// // comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
+
+const items = ['item1', 'item2', 'item3']
+const copyItems = []
+
+// before
+for (let i = 0; i < items.length; i++) {
+  copyItems.push(items[i])
+}
+
+// after
+items.forEach(function(item){
+  copyItems.push(item)
 })
-
-console.log("numCallbackRuns: ", numCallbackRuns)
-
-// 1
-// 3
-// 7
-// numCallbackRuns: 3
-// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
