@@ -1171,18 +1171,34 @@ console.log(moveZeros(nums))
 // // expected output: "b"
 // // expected output: "c"
 
-let ratings = [5, 4, 5];
-let sum = 0;
+// let ratings = [5, 4, 5];
+// let sum = 0;
 
-let sumFunction = async function (a, b)
-{
-  return a + b
-}
+// let sumFunction = async function (a, b)
+// {
+//   return a + b
+// }
 
-ratings.forEach(async function(rating) {
-  sum = await sumFunction(sum, rating)
+// ratings.forEach(async function(rating) {
+//   sum = await sumFunction(sum, rating)
+// })
+
+// console.log(sum)
+// // Naively expected output: 14
+// // Actual output: 0
+
+const arraySparse = [1,3,,7]
+let numCallbackRuns = 0
+
+arraySparse.forEach(function(element) {
+  console.log(element)
+  numCallbackRuns++
 })
 
-console.log(sum)
-// Naively expected output: 14
-// Actual output: 0
+console.log("numCallbackRuns: ", numCallbackRuns)
+
+// 1
+// 3
+// 7
+// numCallbackRuns: 3
+// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
