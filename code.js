@@ -1163,10 +1163,26 @@ console.log(moveZeros(nums))
 
 // // expected output: [4, 1, 4, 20, 16, 1, 18]
 
-const array1 = ['a', 'b', 'c'];
+// const array1 = ['a', 'b', 'c'];
 
-array1.forEach(element => console.log(element));
+// array1.forEach(element => console.log(element));
 
-// expected output: "a"
-// expected output: "b"
-// expected output: "c"
+// // expected output: "a"
+// // expected output: "b"
+// // expected output: "c"
+
+let ratings = [5, 4, 5];
+let sum = 0;
+
+let sumFunction = async function (a, b)
+{
+  return a + b
+}
+
+ratings.forEach(async function(rating) {
+  sum = await sumFunction(sum, rating)
+})
+
+console.log(sum)
+// Naively expected output: 14
+// Actual output: 0
