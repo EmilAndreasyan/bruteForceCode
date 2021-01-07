@@ -1246,17 +1246,27 @@ console.log(moveZeros(nums))
 // obj.sum
 // // 16
 
-function copy(obj) {
-  const copy = Object.create(Object.getPrototypeOf(obj))
-  const propNames = Object.getOwnPropertyNames(obj)
+// function copy(obj) {
+//   const copy = Object.create(Object.getPrototypeOf(obj))
+//   const propNames = Object.getOwnPropertyNames(obj)
 
-  propNames.forEach(function(name) {
-    const desc = Object.getOwnPropertyDescriptor(obj, name)
-    Object.defineProperty(copy, name, desc)
-  })
+//   propNames.forEach(function(name) {
+//     const desc = Object.getOwnPropertyDescriptor(obj, name)
+//     Object.defineProperty(copy, name, desc)
+//   })
 
-  return copy
-}
+//   return copy
+// }
 
-const obj1 = { a: 1, b: 2 }
-const obj2 = copy(obj1) // obj2 looks like obj1 now
+// const obj1 = { a: 1, b: 2 }
+// const obj2 = copy(obj1) // obj2 looks like obj1 now
+
+let words = ['one', 'two', 'three', 'four']
+words.forEach(function(word) {
+  console.log(word)
+  if (word === 'two') {
+    words.shift() //'one' will delete from array
+  }
+}) // one // two // four
+
+console.log(words);  //['two', 'three', 'four']
