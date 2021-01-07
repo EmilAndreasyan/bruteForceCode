@@ -1271,21 +1271,27 @@ console.log(moveZeros(nums))
 
 // console.log(words);  //['two', 'three', 'four']
 
-function flatten(arr) {
-  const result = []
+// function flatten(arr) {
+//   const result = []
 
-  arr.forEach(function(i) {
-    if (Array.isArray(i)) {
-      result.push(...flatten(i))
-    } else {
-      result.push(i)
-    }
-  })
+//   arr.forEach(function(i) {
+//     if (Array.isArray(i)) {
+//       result.push(...flatten(i))
+//     } else {
+//       result.push(i)
+//     }
+//   })
 
-  return result
-}
+//   return result
+// }
 
-// Usage
-const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
+// // Usage
+// const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
 
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+console.log(Array.from('foo'));
+// expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x => x + x));
+// expected output: Array [2, 4, 6]
