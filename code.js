@@ -1228,20 +1228,35 @@ console.log(moveZeros(nums))
 // // a[1] = 5
 // // a[3] = 9
 
-function Counter() {
-  this.sum = 0
-  this.count = 0
-}
-Counter.prototype.add = function(array) {
-  array.forEach(function countEntry(entry) {
-    this.sum += entry
-    ++this.count
-  }, this)
+// function Counter() {
+//   this.sum = 0
+//   this.count = 0
+// }
+// Counter.prototype.add = function(array) {
+//   array.forEach(function countEntry(entry) {
+//     this.sum += entry
+//     ++this.count
+//   }, this)
+// }
+
+// const obj = new Counter()
+// obj.add([2, 5, 9])
+// obj.count
+// // 3
+// obj.sum
+// // 16
+
+function copy(obj) {
+  const copy = Object.create(Object.getPrototypeOf(obj))
+  const propNames = Object.getOwnPropertyNames(obj)
+
+  propNames.forEach(function(name) {
+    const desc = Object.getOwnPropertyDescriptor(obj, name)
+    Object.defineProperty(copy, name, desc)
+  })
+
+  return copy
 }
 
-const obj = new Counter()
-obj.add([2, 5, 9])
-obj.count
-// 3
-obj.sum
-// 16
+const obj1 = { a: 1, b: 2 }
+const obj2 = copy(obj1) // obj2 looks like obj1 now
