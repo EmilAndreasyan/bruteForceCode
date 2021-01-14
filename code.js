@@ -1290,12 +1290,23 @@ console.log(moveZeros(nums))
 
 // flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-console.log(Array.from('foo'));
-// expected output: Array ["f", "o", "o"]
+// console.log(Array.from('foo'));
+// // expected output: Array ["f", "o", "o"]
 
-console.log(Array.from([1, 2, 3], x => x + x));
-// expected output: Array [2, 4, 6]
+// console.log(Array.from([1, 2, 3], x => x + x));
+// // expected output: Array [2, 4, 6]
 
-const set = new Set(['foo', 'bar', 'baz', 'foo']);
-Array.from(set);
-// [ "foo", "bar", "baz" ]
+// const set = new Set(['foo', 'bar', 'baz', 'foo']);
+// Array.from(set);
+// // [ "foo", "bar", "baz" ]
+
+const map = new Map([[1, 2], [2, 4], [4, 8]]);
+Array.from(map);
+// [[1, 2], [2, 4], [4, 8]]
+
+const mapper = new Map([['1', 'a'], ['2', 'b']]);
+Array.from(mapper.values());
+// ['a', 'b'];
+
+Array.from(mapper.keys());
+// ['1', '2'];
