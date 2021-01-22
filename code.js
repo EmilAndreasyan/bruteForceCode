@@ -1392,3 +1392,8 @@ arr.includes('a', -100) // true
 arr.includes('b', -100) // true
 arr.includes('c', -100) // true
 arr.includes('a', -2)   // false
+
+(function() {
+  console.log(Array.prototype.includes.call(arguments, 'a'))  // true
+  console.log(Array.prototype.includes.call(arguments, 'd'))  // false
+})('a','b','c') 
