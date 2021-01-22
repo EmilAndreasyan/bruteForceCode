@@ -1376,3 +1376,8 @@ console.log(pets.includes('at'));
 [1, 2, 3].includes(3, 3)   // false
 [1, 2, 3].includes(3, -1)  // true
 [1, 2, NaN].includes(NaN)  // true
+
+let arr = ['a', 'b', 'c']
+
+arr.includes('c', 3)    // false
+arr.includes('c', 100)  // false
