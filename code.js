@@ -1358,40 +1358,45 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(pets.includes('at'));
 // // expected output: false
 
-const array1 = [1, 2, 3];
+// const array1 = [1, 2, 3];
 
-console.log(array1.includes(2));
-// expected output: true
+// console.log(array1.includes(2));
+// // expected output: true
 
-const pets = ['cat', 'dog', 'bat'];
+// const pets = ['cat', 'dog', 'bat'];
 
-console.log(pets.includes('cat'));
-// expected output: true
+// console.log(pets.includes('cat'));
+// // expected output: true
 
-console.log(pets.includes('at'));
-// expected output: false
+// console.log(pets.includes('at'));
+// // expected output: false
 
-[1, 2, 3].includes(2)      // true
-[1, 2, 3].includes(4)      // false
-[1, 2, 3].includes(3, 3)   // false
-[1, 2, 3].includes(3, -1)  // true
-[1, 2, NaN].includes(NaN)  // true
+// [1, 2, 3].includes(2)      // true
+// [1, 2, 3].includes(4)      // false
+// [1, 2, 3].includes(3, 3)   // false
+// [1, 2, 3].includes(3, -1)  // true
+// [1, 2, NaN].includes(NaN)  // true
 
-let arr = ['a', 'b', 'c']
+// let arr = ['a', 'b', 'c']
 
-arr.includes('c', 3)    // false
-arr.includes('c', 100)  // false
+// arr.includes('c', 3)    // false
+// arr.includes('c', 100)  // false
 
-// array length is 3
-// fromIndex is -100
-// computed index is 3 + (-100) = -97
+// // array length is 3
+// // fromIndex is -100
+// // computed index is 3 + (-100) = -97
 
-let arr = ['a', 'b', 'c']
+// let arr = ['a', 'b', 'c']
 
-arr.includes('a', -100) // true
-arr.includes('b', -100) // true
-arr.includes('c', -100) // true
-arr.includes('a', -2)   // false
+// arr.includes('a', -100) // true
+// arr.includes('b', -100) // true
+// arr.includes('c', -100) // true
+// arr.includes('a', -2)   // false
+
+// (function() {
+//   console.log(Array.prototype.includes.call(arguments, 'a'))  // true
+//   console.log(Array.prototype.includes.call(arguments, 'd'))  // false
+// })('a','b','c') 
 
 (function() {
   console.log(Array.prototype.includes.call(arguments, 'a'))  // true
