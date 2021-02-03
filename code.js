@@ -1419,6 +1419,7 @@ Array.from([1, 2, 3], x => x + x);
 
 // var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
+
 // updateVegetablesCollection(veggies, 'spinach');
 // // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
 // updateVegetablesCollection(veggies, 'spinach');
@@ -1434,6 +1435,16 @@ if (!Array.isArray) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
+
+// all following calls return true
+Array.isArray([]);
+Array.isArray([1]);
+Array.isArray(new Array());
+Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array(3));
+// Little known fact: Array.prototype itself is an array:
+Array.isArray(Array.prototype);
+
 
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
