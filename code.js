@@ -1408,21 +1408,26 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(beasts.indexOf('bison'));
 // // expected output: 1
 
-function updateVegetablesCollection (veggies, veggie) {
-  if (veggies.indexOf(veggie) === -1) {
-      veggies.push(veggie);
-      console.log('New veggies collection is : ' + veggies);
-  } else if (veggies.indexOf(veggie) > -1) {
-      console.log(veggie + ' already exists in the veggies collection.');
-  }
-}
+// function updateVegetablesCollection (veggies, veggie) {
+//   if (veggies.indexOf(veggie) === -1) {
+//       veggies.push(veggie);
+//       console.log('New veggies collection is : ' + veggies);
+//   } else if (veggies.indexOf(veggie) > -1) {
+//       console.log(veggie + ' already exists in the veggies collection.');
+//   }
+// }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+// var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
-updateVegetablesCollection(veggies, 'spinach');
-// New veggies collection is : potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
-// spinach already exists in the veggies collection.
+// updateVegetablesCollection(veggies, 'spinach');
+// // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+// updateVegetablesCollection(veggies, 'spinach');
+// // spinach already exists in the veggies collection.
+
+Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
 
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
