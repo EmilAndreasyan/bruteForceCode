@@ -1429,6 +1429,12 @@ Array.isArray({foo: 123}); // false
 Array.isArray('foobar');   // false
 Array.isArray(undefined);  // false
 
+if (!Array.isArray) {
+  Array.isArray = function(arg) {
+    return Object.prototype.toString.call(arg) === '[object Array]';
+  };
+}
+
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
 // // expected output: 4
