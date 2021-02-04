@@ -1457,6 +1457,16 @@ Array.isArray(false);
 Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 
+var iframe = document.createElement('iframe');
+document.body.appendChild(iframe);
+xArray = window.frames[window.frames.length-1].Array;
+var arr = new xArray(1,2,3); // [1,2,3]
+
+// Correctly checking for Array
+Array.isArray(arr);  // true
+// Considered harmful, because doesn't work through iframes
+arr instanceof Array; // false
+
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
 // // expected output: 4
