@@ -1445,6 +1445,17 @@ Array.isArray(new Array(3));
 // Little known fact: Array.prototype itself is an array:
 Array.isArray(Array.prototype);
 
+// all following calls return false
+Array.isArray();
+Array.isArray({});
+Array.isArray(null);
+Array.isArray(undefined);
+Array.isArray(17);
+Array.isArray('Array');
+Array.isArray(true);
+Array.isArray(false);
+Array.isArray(new Uint8Array(32));
+Array.isArray({ __proto__: Array.prototype });
 
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
