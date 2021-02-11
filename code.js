@@ -1425,47 +1425,47 @@ Array.from([1, 2, 3], x => x + x);
 // updateVegetablesCollection(veggies, 'spinach');
 // // spinach already exists in the veggies collection.
 
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
+// Array.isArray([1, 2, 3]);  // true
+// Array.isArray({foo: 123}); // false
+// Array.isArray('foobar');   // false
+// Array.isArray(undefined);  // false
 
-if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
-  };
-}
+// if (!Array.isArray) {
+//   Array.isArray = function(arg) {
+//     return Object.prototype.toString.call(arg) === '[object Array]';
+//   };
+// }
 
-// all following calls return true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c', 'd'));
-Array.isArray(new Array(3));
-// Little known fact: Array.prototype itself is an array:
-Array.isArray(Array.prototype);
+// // all following calls return true
+// Array.isArray([]);
+// Array.isArray([1]);
+// Array.isArray(new Array());
+// Array.isArray(new Array('a', 'b', 'c', 'd'));
+// Array.isArray(new Array(3));
+// // Little known fact: Array.prototype itself is an array:
+// Array.isArray(Array.prototype);
 
-// all following calls return false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray('Array');
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray(new Uint8Array(32));
-Array.isArray({ __proto__: Array.prototype });
+// // all following calls return false
+// Array.isArray();
+// Array.isArray({});
+// Array.isArray(null);
+// Array.isArray(undefined);
+// Array.isArray(17);
+// Array.isArray('Array');
+// Array.isArray(true);
+// Array.isArray(false);
+// Array.isArray(new Uint8Array(32));
+// Array.isArray({ __proto__: Array.prototype });
 
-var iframe = document.createElement('iframe');
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+// var iframe = document.createElement('iframe');
+// document.body.appendChild(iframe);
+// xArray = window.frames[window.frames.length-1].Array;
+// var arr = new xArray(1,2,3); // [1,2,3]
 
-// Correctly checking for Array
-Array.isArray(arr);  // true
-// Considered harmful, because doesn't work through iframes
-arr instanceof Array; // false
+// // Correctly checking for Array
+// Array.isArray(arr);  // true
+// // Considered harmful, because doesn't work through iframes
+// arr instanceof Array; // false
 
 // // start from index 2
 // console.log(beasts.indexOf('bison', 2));
@@ -1507,3 +1507,13 @@ arr instanceof Array; // false
 // // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
 // updateVegetablesCollection(veggies, 'spinach');
 // // spinach already exists in the veggies collection.
+
+var iframe = document.createElement('iframe');
+document.body.appendChild(iframe);
+xArray = window.frames[window.frames.length-1].Array;
+var arr = new xArray(1,2,3); // [1,2,3]
+
+// Correctly checking for Array
+Array.isArray(arr);  // true
+// Considered harmful, because doesn't work through iframes
+arr instanceof Array; // false
