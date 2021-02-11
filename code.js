@@ -1517,3 +1517,14 @@ var arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // Considered harmful, because doesn't work through iframes
 arr instanceof Array; // false
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// expected output: "Fire-Air-Water"
