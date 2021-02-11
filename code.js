@@ -1528,3 +1528,9 @@ console.log(elements.join(''));
 
 console.log(elements.join('-'));
 // expected output: "Fire-Air-Water"
+
+var a = ['Wind', 'Water', 'Fire'];
+a.join();      // 'Wind,Water,Fire'
+a.join(', ');  // 'Wind, Water, Fire'
+a.join(' + '); // 'Wind + Water + Fire'
+a.join('');    // 'WindWaterFire'
