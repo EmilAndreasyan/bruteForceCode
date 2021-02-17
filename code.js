@@ -1508,39 +1508,50 @@ Array.from([1, 2, 3], x => x + x);
 // updateVegetablesCollection(veggies, 'spinach');
 // // spinach already exists in the veggies collection.
 
-var iframe = document.createElement('iframe');
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+// var iframe = document.createElement('iframe');
+// document.body.appendChild(iframe);
+// xArray = window.frames[window.frames.length-1].Array;
+// var arr = new xArray(1,2,3); // [1,2,3]
 
-// Correctly checking for Array
-Array.isArray(arr);  // true
-// Considered harmful, because doesn't work through iframes
-arr instanceof Array; // false
+// // Correctly checking for Array
+// Array.isArray(arr);  // true
+// // Considered harmful, because doesn't work through iframes
+// arr instanceof Array; // false
 
-const elements = ['Fire', 'Air', 'Water'];
+// const elements = ['Fire', 'Air', 'Water'];
 
-console.log(elements.join());
-// expected output: "Fire,Air,Water"
+// console.log(elements.join());
+// // expected output: "Fire,Air,Water"
 
-console.log(elements.join(''));
-// expected output: "FireAirWater"
+// console.log(elements.join(''));
+// // expected output: "FireAirWater"
 
-console.log(elements.join('-'));
-// expected output: "Fire-Air-Water"
+// console.log(elements.join('-'));
+// // expected output: "Fire-Air-Water"
 
-var a = ['Wind', 'Water', 'Fire'];
-a.join();      // 'Wind,Water,Fire'
-a.join(', ');  // 'Wind, Water, Fire'
-a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'
+// var a = ['Wind', 'Water', 'Fire'];
+// a.join();      // 'Wind,Water,Fire'
+// a.join(', ');  // 'Wind, Water, Fire'
+// a.join(' + '); // 'Wind + Water + Fire'
+// a.join('');    // 'WindWaterFire'
 
-function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
-  console.log(s); // '1,a,true'
-}
-f(1, 'a', true);
-//expected output: "1,a,true"
+// function f(a, b, c) {
+//   var s = Array.prototype.join.call(arguments);
+//   console.log(s); // '1,a,true'
+// }
+// f(1, 'a', true);
+// //expected output: "1,a,true"
+
+// const array1 = ['a', 'b', 'c'];
+// const iterator = array1.keys();
+
+// for (const key of iterator) {
+//   console.log(key);
+// }
+
+// // expected output: 0
+// // expected output: 1
+// // expected output: 2
 
 const array1 = ['a', 'b', 'c'];
 const iterator = array1.keys();
