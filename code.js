@@ -1586,22 +1586,29 @@ Array.from([1, 2, 3], x => x + x);
 // numbers.lastIndexOf(2, -2); // 0
 // numbers.lastIndexOf(2, -1); // 3
 
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.lastIndexOf(element);
-while (idx != -1) {
-  indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
-}
+// var indices = [];
+// var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+// var element = 'a';
+// var idx = array.lastIndexOf(element);
+// while (idx != -1) {
+//   indices.push(idx);
+//   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+// }
 
-console.log(indices);
-// [4, 2, 0]
+// console.log(indices);
+// // [4, 2, 0]
 
-const array1 = [1, 4, 9, 16];
+// const array1 = [1, 4, 9, 16];
 
-// pass a function to map
-const map1 = array1.map(x => x * 2);
+// // pass a function to map
+// const map1 = array1.map(x => x * 2);
 
-console.log(map1);
-// expected output: Array [2, 8, 18, 32]
+// console.log(map1);
+// // expected output: Array [2, 8, 18, 32]
+
+let numbers = [1, 4, 9]
+let roots = numbers.map(function(num) {
+    return Math.sqrt(num)
+})
+// roots is now     [1, 2, 3]
+// numbers is still [1, 4, 9]
