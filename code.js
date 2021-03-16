@@ -1606,25 +1606,32 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(map1);
 // // expected output: Array [2, 8, 18, 32]
 
-let numbers = [1, 4, 9]
-let roots = numbers.map(function(num) {
-    return Math.sqrt(num)
-})
-// roots is now     [1, 2, 3]
-// numbers is still [1, 4, 9]
+// let numbers = [1, 4, 9]
+// let roots = numbers.map(function(num) {
+//     return Math.sqrt(num)
+// })
+// // roots is now     [1, 2, 3]
+// // numbers is still [1, 4, 9]
 
-let kvArray = [{key: 1, value: 10},
-  {key: 2, value: 20},
-  {key: 3, value: 30}]
+// let kvArray = [{key: 1, value: 10},
+//   {key: 2, value: 20},
+//   {key: 3, value: 30}]
 
-let reformattedArray = kvArray.map(obj => {
-let rObj = {}
-rObj[obj.key] = obj.value
-return rObj
-})
+// let reformattedArray = kvArray.map(obj => {
+// let rObj = {}
+// rObj[obj.key] = obj.value
+// return rObj
+// })
 // reformattedArray is now [{1: 10}, {2: 20}, {3: 30}],
 
 // kvArray is still:
 // [{key: 1, value: 10},
 //  {key: 2, value: 20},
 //  {key: 3, value: 30}]
+
+let xs = ['10', '10', '10']
+
+xs = xs.map(parseInt)
+
+console.log(xs)
+// Actual result of 10,NaN,2 may be unexpected based on the above description.
