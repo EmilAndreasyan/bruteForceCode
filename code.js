@@ -1629,19 +1629,25 @@ Array.from([1, 2, 3], x => x + x);
 //  {key: 2, value: 20},
 //  {key: 3, value: 30}]
 
-let xs = ['10', '10', '10']
+// let xs = ['10', '10', '10']
 
-xs = xs.map(parseInt)
+// xs = xs.map(parseInt)
 
-console.log(xs)
-// Actual result of 10,NaN,2 may be unexpected based on the above description.
+// console.log(xs)
+// // Actual result of 10,NaN,2 may be unexpected based on the above description.
 
-let numbers = [1, 2, 3, 4]
-let filteredNumbers = numbers.map(function(num, index) {
-  if (index < 3) {
-     return num
-  }
-})
-// index goes from 0, so the filterNumbers are 1,2,3 and undefined.
-// filteredNumbers is [1, 2, 3, undefined]
-// numbers is still [1, 2, 3, 4]
+// let numbers = [1, 2, 3, 4]
+// let filteredNumbers = numbers.map(function(num, index) {
+//   if (index < 3) {
+//      return num
+//   }
+// })
+// // index goes from 0, so the filterNumbers are 1,2,3 and undefined.
+// // filteredNumbers is [1, 2, 3, undefined]
+// // numbers is still [1, 2, 3, 4]
+
+Array.of(7); // [7]
+Array(7); // array of 7 empty slots
+
+Array.of(1, 2, 3); // [1, 2, 3]
+Array(1, 2, 3);    // [1, 2, 3]
