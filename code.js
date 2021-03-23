@@ -1651,3 +1651,15 @@ Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
+
+if (!Array.of) {
+  Array.of = function() {
+    return Array.prototype.slice.call(arguments);
+    // Or
+    let vals = [];
+    for(let prop in arguments){
+        vals.push(arguments[prop]);
+    }
+    return vals;
+  }
+}
