@@ -1664,15 +1664,23 @@ Array.from([1, 2, 3], x => x + x);
 //   }
 // }
 
-const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+// const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 
-console.log(plants.pop());
-// expected output: "tomato"
+// console.log(plants.pop());
+// // expected output: "tomato"
 
-console.log(plants);
-// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+// console.log(plants);
+// // expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
 
-plants.pop();
+// plants.pop();
 
-console.log(plants);
-// expected output: Array ["broccoli", "cauliflower", "cabbage"]
+// console.log(plants);
+// // expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+var popped = myFish.pop();
+
+console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+
+console.log(popped); // 'sturgeon'
