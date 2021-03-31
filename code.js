@@ -1646,20 +1646,33 @@ Array.from([1, 2, 3], x => x + x);
 // // filteredNumbers is [1, 2, 3, undefined]
 // // numbers is still [1, 2, 3, 4]
 
-Array.of(7); // [7]
-Array(7); // array of 7 empty slots
+// Array.of(7); // [7]
+// Array(7); // array of 7 empty slots
 
-Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+// Array.of(1, 2, 3); // [1, 2, 3]
+// Array(1, 2, 3);    // [1, 2, 3]
 
-if (!Array.of) {
-  Array.of = function() {
-    return Array.prototype.slice.call(arguments);
-    // Or
-    let vals = [];
-    for(let prop in arguments){
-        vals.push(arguments[prop]);
-    }
-    return vals;
-  }
-}
+// if (!Array.of) {
+//   Array.of = function() {
+//     return Array.prototype.slice.call(arguments);
+//     // Or
+//     let vals = [];
+//     for(let prop in arguments){
+//         vals.push(arguments[prop]);
+//     }
+//     return vals;
+//   }
+// }
+
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// expected output: "tomato"
+
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage"]
