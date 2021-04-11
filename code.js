@@ -1677,18 +1677,31 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(plants);
 // // expected output: Array ["broccoli", "cauliflower", "cabbage"]
 
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+// var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
-var popped = myFish.pop();
+// var popped = myFish.pop();
 
-console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+// console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 
-console.log(popped); // 'sturgeon'
+// console.log(popped); // 'sturgeon'
 
-var myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
+// var myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
 
-var popped = Array.prototype.pop.call(myFish); //same syntax for using apply( )
+// var popped = Array.prototype.pop.call(myFish); //same syntax for using apply( )
 
-console.log(myFish); // {0:'angel', 1:'clown', 2:'mandarin', length: 3}
+// console.log(myFish); // {0:'angel', 1:'clown', 2:'mandarin', length: 3}
 
-console.log(popped); // 'sturgeon'
+// console.log(popped); // 'sturgeon'
+
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+// expected output: 4
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens', 'cats', 'dogs');
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
