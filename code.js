@@ -1711,3 +1711,11 @@ let total = sports.push('football', 'swimming')
 console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total)   // 4
 
+let vegetables = ['parsnip', 'potato']
+let moreVegs = ['celery', 'beetroot']
+
+// Merge the second array into the first one
+// Equivalent to vegetables.push('celery', 'beetroot')
+Array.prototype.push.apply(vegetables, moreVegs)
+
+console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
