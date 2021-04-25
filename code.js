@@ -1711,6 +1711,16 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
 // console.log(total)   // 4
 
+// let vegetables = ['parsnip', 'potato']
+// let moreVegs = ['celery', 'beetroot']
+
+// // Merge the second array into the first one
+// // Equivalent to vegetables.push('celery', 'beetroot')
+// Array.prototype.push.apply(vegetables, moreVegs)
+
+// console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+
+
 let obj = {
   length: 0,
 
@@ -1727,11 +1737,13 @@ obj.addElem({})
 console.log(obj.length)
 // → 2
 
-// let vegetables = ['parsnip', 'potato']
-// let moreVegs = ['celery', 'beetroot']
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-// // Merge the second array into the first one
-// // Equivalent to vegetables.push('celery', 'beetroot')
-// Array.prototype.push.apply(vegetables, moreVegs)
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
 
-// console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
