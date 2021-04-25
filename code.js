@@ -1693,29 +1693,45 @@ Array.from([1, 2, 3], x => x + x);
 
 // console.log(popped); // 'sturgeon'
 
-const animals = ['pigs', 'goats', 'sheep'];
+// const animals = ['pigs', 'goats', 'sheep'];
 
-const count = animals.push('cows');
-console.log(count);
-// expected output: 4
-console.log(animals);
-// expected output: Array ["pigs", "goats", "sheep", "cows"]
+// const count = animals.push('cows');
+// console.log(count);
+// // expected output: 4
+// console.log(animals);
+// // expected output: Array ["pigs", "goats", "sheep", "cows"]
 
-animals.push('chickens', 'cats', 'dogs');
-console.log(animals);
-// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+// animals.push('chickens', 'cats', 'dogs');
+// console.log(animals);
+// // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 
-let sports = ['soccer', 'baseball']
-let total = sports.push('football', 'swimming')
+// let sports = ['soccer', 'baseball']
+// let total = sports.push('football', 'swimming')
 
-console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total)   // 4
+// console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
+// console.log(total)   // 4
 
-let vegetables = ['parsnip', 'potato']
-let moreVegs = ['celery', 'beetroot']
+let obj = {
+  length: 0,
 
-// Merge the second array into the first one
-// Equivalent to vegetables.push('celery', 'beetroot')
-Array.prototype.push.apply(vegetables, moreVegs)
+  addElem: function addElem(elem) {
+      // obj.length is automatically incremented
+      // every time an element is added.
+      [].push.call(this, elem)
+  }
+}
 
-console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+// Let's add some empty objects just to illustrate.
+obj.addElem({})
+obj.addElem({})
+console.log(obj.length)
+// → 2
+
+// let vegetables = ['parsnip', 'potato']
+// let moreVegs = ['celery', 'beetroot']
+
+// // Merge the second array into the first one
+// // Equivalent to vegetables.push('celery', 'beetroot')
+// Array.prototype.push.apply(vegetables, moreVegs)
+
+// console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
