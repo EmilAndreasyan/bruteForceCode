@@ -1754,3 +1754,7 @@ const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
 console.log(array1);
 // expected output: Array [4, 5, 2, 3, 0, 1]
 
+var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+  return a + b;
+});
+// sum is 6
