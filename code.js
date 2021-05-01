@@ -1720,30 +1720,37 @@ Array.from([1, 2, 3], x => x + x);
 
 // console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
 
+// let obj = {
+//   length: 0,
 
-let obj = {
-  length: 0,
+//   addElem: function addElem(elem) {
+//       // obj.length is automatically incremented
+//       // every time an element is added.
+//       [].push.call(this, elem)
+//   }
+// }
 
-  addElem: function addElem(elem) {
-      // obj.length is automatically incremented
-      // every time an element is added.
-      [].push.call(this, elem)
-  }
-}
+// // Let's add some empty objects just to illustrate.
+// obj.addElem({})
+// obj.addElem({})
+// console.log(obj.length)
+// // → 2
 
-// Let's add some empty objects just to illustrate.
-obj.addElem({})
-obj.addElem({})
-console.log(obj.length)
-// → 2
+// const array1 = [1, 2, 3, 4];
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-const array1 = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// // 1 + 2 + 3 + 4
+// console.log(array1.reduce(reducer));
+// // expected output: 10
 
-// 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer));
-// expected output: 10
+// // 5 + 1 + 2 + 3 + 4
+// console.log(array1.reduce(reducer, 5));
+// // expected output: 15
 
-// 5 + 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer, 5));
-// expected output: 15
+const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
+  (accumulator, currentValue) => accumulator.concat(currentValue)
+);
+
+console.log(array1);
+// expected output: Array [4, 5, 2, 3, 0, 1]
+
