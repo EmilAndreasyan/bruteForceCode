@@ -1770,3 +1770,11 @@ console.log('reversed:', reversed);
 // Careful: reverse is destructive -- it changes the original array.
 console.log('array1:', array1);
 // expected ou
+
+const a = [1, 2, 3];
+
+console.log(a); // [1, 2, 3]
+
+a.reverse();
+
+console.log(a); // [3, 2, 1]
