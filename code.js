@@ -1747,14 +1747,26 @@ Array.from([1, 2, 3], x => x + x);
 // console.log(array1.reduce(reducer, 5));
 // // expected output: 15
 
-const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
-  (accumulator, currentValue) => accumulator.concat(currentValue)
-);
+// const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
+//   (accumulator, currentValue) => accumulator.concat(currentValue)
+// );
 
-console.log(array1);
-// expected output: Array [4, 5, 2, 3, 0, 1]
+// console.log(array1);
+// // expected output: Array [4, 5, 2, 3, 0, 1]
 
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
-  return a + b;
-});
-// sum is 6
+// var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+//   return a + b;
+// });
+// // sum is 6
+
+const array1 = ['one', 'two', 'three'];
+console.log('array1:', array1);
+// expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+// expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array1:', array1);
+// expected ou
